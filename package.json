@@ -1,0 +1,24 @@
+{
+  "name": "shokax-docs",
+  "version": "1.0.0",
+  "description": "The docs website of hexo-theme-shokax",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "zkz098",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@algolia/client-search": "< 6",
+    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.62",
+    "algoliasearch": "^4.17.0",
+    "vue": "^3.3.4",
+    "vuepress": "2.0.0-beta.62",
+    "vuepress-plugin-sitemap2": "2.0.0-beta.211",
+    "typescript": "^5.0.4",
+    "sass": "^1.62.0"
+  }
+}
