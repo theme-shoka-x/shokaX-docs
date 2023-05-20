@@ -1,5 +1,4 @@
 .idea
-pnpm-lock.yaml
 node_modules
 /docs/.vuepress/dist
 /docs/.vuepress/.cache
