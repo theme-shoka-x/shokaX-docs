@@ -78,9 +78,10 @@ pnpm add hexo-feed
 ::::
 
 ## 配置主题
-:::tip
+:::warning
 更改根目录`_config.yml`中的`theme`为`shokaX`(SXC默认origin或npm安装修改为`shokax`) \
-请注意,本主题仅在npm上使用的是`shokax`,其他情况下均为`shokaX`
+请注意,本主题仅在npm上使用的是`shokax`,其他情况下均为`shokaX` \
+对于linux等大小写敏感的系统，npm源的theme必须使用`shokax`同时修改自定义配置文件为`_config.shokax.yml`
 :::
 
 markdown配置如下:
