@@ -3,6 +3,7 @@ import sidebar from './nav/sidebar'
 import {defaultTheme, defineUserConfig} from 'vuepress'
 import { sitemapPlugin } from "vuepress-plugin-sitemap2"
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
 
 export default defineUserConfig({
     plugins: [
@@ -19,6 +20,9 @@ export default defineUserConfig({
               buttonText: '搜索文档'
             }
           }
+        }),
+        shikiPlugin({
+            theme: "dark-plus"
         })
     ],
     lang: 'zh-CN',

@@ -1,5 +1,30 @@
 # 文章内嵌标签
 ## MD标签
+### 数学公式(KaTeX)
+使用[KaTeX](https://katex.org/)在文章内添加数学公式，需要在 Front-matter 中添加`math: true`:
+```markdown
+---
+title: 数学公式显示
+math: true
+---
+
+行内公式：$\sqrt {3x-1}+(1+x)^2$
+
+独立块显示：
+$$\begin {array}{c}
+
+\nabla \times \vec {\mathbf {B}} -\, \frac1c\, \frac {\partial\vec {\mathbf {E}}}{\partial t} &
+= \frac {4\pi}{c}\vec {\mathbf {j}}    \nabla \cdot \vec {\mathbf {E}} & = 4 \pi \rho \\
+
+\nabla \times \vec {\mathbf {E}}\, +\, \frac1c\, \frac {\partial\vec {\mathbf {B}}}{\partial t} & = \vec {\mathbf {0}} \\
+
+\nabla \cdot \vec {\mathbf {B}} & = 0
+
+\end {array}$$
+```
+效果预览:
+![公式渲染图](img.webp)
+
 ### quiz(练习题)
 #### 开启此功能
 在使用此功能前，需要在 Front-matter 里添加`quiz: true`，例如:
