@@ -38,7 +38,8 @@ export default {
       text: "API指南",
       collapsible: true,
       children: [
-        {text: "术语表及说明",link: "/develop/interface/"}
+        {text: "术语表及说明",link: "/develop/interface/"},
+        {text: "dom辅助函数",link: "/develop/interface/dom.html"}
       ]
     }
   ]
