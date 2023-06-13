@@ -112,3 +112,69 @@ experiments:
 因此，长文章优化功能仅建议在有文章字数超过3万字或站点主要面向渲染性能较差的设备时启用。
 
 ### 杂项设置
+#### 网站标题自定义
+> 自动网站点击之后和隐藏之后的标题，可覆盖原本呈现的文字
+* 在Hexo的根目录下source文件夹下
+* 进入_data目录 (如果没有创建)
+* 在下面创建文件`languages.yml`
+* 修改网站标题 在不同语言情况下favicon show时,和隐藏呈现的文字
+```yaml
+# language
+zh-CN:
+  # items
+  favicon:
+    show: 不负韶华
+    hide: 以梦为马！
+    
+zh-HK:
+  favicon:
+    show: 不负韶华
+    hide: 以梦为马！
+
+zh-TW:
+  favicon:
+    show: 不负韶华
+    hide: 以梦为马！
+
+en:
+  favicon:
+    show: 不负韶华
+    hide: 以梦为马！
+
+ja:
+  favicon:
+    show: 不负韶华
+    hide: 以梦为马！
+```
+* 保存文件即可
+
+#### 网站头像自定义
+* 在Hexo的根目录下source文件夹下
+* 进入_data目录 (如果没有创建)
+* 此时的要根据_config.shokaX.yml下面的自定义assets 图片目录，在_data创建对应的目录
+* 不同的文件名称即可替代对应的图片
+
+* avatar.jpg  # 默认情况下对应的是主页上的个人头像
+* favicon.ico  # 网站标题左边成功呈现的头像logo
+* apple-touch-icon.png # 网站图标的png格式即可
+* failure.ico  # 网站隐藏窗台呈现的图标
+* alipay.png  # 支付宝付款码
+* wechatpay.png # 微信收款码
+* paypal.png  # PayPal的收款码
+
+#### 网站轮播图自定义
+* 在上面的_data 目录下创建 images.yml
+* 在文件内存入轮播图图片即可替换原本自带的轮播图
+* 类似如下，可存入图床当中
+```yaml
+- https://i.imgtg.com/2023/03/09/YS2LU.jpg
+- https://i.imgtg.com/2023/03/09/YSj7p.jpg
+- https://i.imgtg.com/2023/03/09/YS6XY.jpg
+- https://i.imgtg.com/2023/03/09/YSIlc.jpg
+- https://i.imgtg.com/2023/03/09/YQSYM.jpg
+- https://i.imgtg.com/2023/03/09/Y0xvg.jpg
+- https://i.imgtg.com/2023/03/09/Y0iNK.jpg
+- https://i.imgtg.com/2023/03/09/Y0zdB.jpg
+- https://i.imgtg.com/2023/03/09/Y0kTl.jpg
+- https://i.imgtg.com/2023/03/09/Y0hOs.jpg
+```
