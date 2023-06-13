@@ -65,3 +65,22 @@ gitalk:
   proxy: # CORS代理，选填
 ```
 :::
+
+## 添加评论案例
+> 使用waline评论系统 Zeabur服务端作为部署
+> Zeabur的控制台国内好像打不开(我没打开),但是生成的Domains要比Vercel的速度快很多
+
+![云服务器对比](https://github.com/foryouos/shokaX-docs/assets/58133210/882899f3-5050-4b61-ace9-5ea6933a9217 "来源Twikoo文档对各服务器的对比")
+* Zeabur服务端部署，[官方简洁](https://waline.js.org/guide/deploy/zeabur.html) 一步一步来，到最后可以通过Domains打开评论即可
+> 部署时间会长一点5分钟左右，耐心等待，部署running之后，要生成Domains，并打开Doamins测试，成功即可
+
+* 配置根目录下_config.shokaX.yml的评论系统
+```yaml
+waline:
+  enable: true # 是否启用 
+  serverURL: "https://domains.zeabur.app"  # 将此链接换成您自己的Domains,主页链接后面不能加 /  会出错
+```
+* 清理Hexo cl 
+* 重新构建 Hexo g
+* Hexo s 评论就可以使用啦
+![image](https://github.com/foryouos/shokaX-docs/assets/58133210/7c2ab393-96f1-4cce-95cc-0017e9981026)
