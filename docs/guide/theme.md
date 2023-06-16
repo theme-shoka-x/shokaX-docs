@@ -88,6 +88,48 @@ seo只需要在对应搜索引擎后填入验证码即可(域名验证->meta验�
 visitor需要填入对应项目的许可码，一般包含在js文件/script标签中 
 例如clarity一般是js代码中function的第五个参数，百度统计是`?hm=`后面的代码
 
+#### 百度SEO
+> 让npm自动生成网站的sitemap并提交到百度或其它搜索引擎
+
+* 安装相关的插件
+```shell
+npm install hexo-generator-sitemap --save     
+npm install hexo-generator-baidu-sitemap --save
+```
+* 修改并添加在根目录下_config.yml
+```yaml
+#在deploy下加入type : 
+deploy:
+  - type : baidu_url_submitter
+# 自动生成sitemap 此文件可以提交必应Google等
+sitemap:
+ path: sitemap.xml
+# 生成百度的sitemap
+baidusitemap:
+ path: baidusitemap.xml
+# 百度提交
+baidu_url_submit:
+  count: 100
+  host: #必填 您的完整网址
+  token: # 必填  API提交百度所需要的token值，在百度站长之家获取
+  path: baidu_urls.txt  # 会生成的urltxt文件
+```
+#### nofollow插件
+> 自动为Hexo博客中的外键添加`rel="external nofollow noreferrer"从而改善网站SEO
+
+* 安装
+```shell
+npm i hexo-filter-nofollow --save
+```
+* 配置根目录config.yml文件
+```yaml
+nofollow:
+  enable: true  # 是否启用插件
+  field: site   # 查看处理范围,post仅处理文章,site 处理全站所有内容
+  exclude:  # 域名白名单
+    - 'exclude1.com'
+    - 'exclude2.com'
+```
 ### 实验性特性
 :::tip
 实验性特性均不稳定，随时可能引入破坏性更改，且部分有明显副作用
