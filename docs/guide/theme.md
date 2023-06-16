@@ -118,48 +118,7 @@ seo只需要在对应搜索引擎后填入验证码即可(域名验证->meta验�
 visitor需要填入对应项目的许可码，一般包含在js文件/script标签中 
 例如clarity一般是js代码中function的第五个参数，百度统计是`?hm=`后面的代码
 
-#### 百度SEO
-> 让npm自动生成网站的sitemap并提交到百度或其它搜索引擎
 
-* 安装相关的插件
-```shell
-npm install hexo-generator-sitemap --save     
-npm install hexo-generator-baidu-sitemap --save
-```
-* 修改并添加在根目录下_config.yml
-```yaml
-#在deploy下加入type : 
-deploy:
-  - type : baidu_url_submitter
-# 自动生成sitemap 此文件可以提交必应Google等
-sitemap:
- path: sitemap.xml
-# 生成百度的sitemap
-baidusitemap:
- path: baidusitemap.xml
-# 百度提交
-baidu_url_submit:
-  count: 100
-  host: #必填 您的完整网址
-  token: # 必填  API提交百度所需要的token值，在百度站长之家获取
-  path: baidu_urls.txt  # 会生成的urltxt文件
-```
-#### nofollow插件
-> 自动为Hexo博客中的外键添加`rel="external nofollow noreferrer"从而改善网站SEO
-
-* 安装
-```shell
-npm i hexo-filter-nofollow --save
-```
-* 配置根目录config.yml文件
-```yaml
-nofollow:
-  enable: true  # 是否启用插件
-  field: site   # 查看处理范围,post仅处理文章,site 处理全站所有内容
-  exclude:  # 域名白名单
-    - 'exclude1.com'
-    - 'exclude2.com'
-```
 ### 夜间模式
 ```yaml
 darkmode: # true
@@ -262,6 +221,30 @@ ja:
 - https://i.imgtg.com/2023/03/09/Y0kTl.jpg
 - https://i.imgtg.com/2023/03/09/Y0hOs.jpg
 ```
+### 首页精选与分类翻转块
+1, 修改站点配置，在Hexo根目录`_config.yml`中找到`category_map`,配置每个分类对应的英文映射
+> Hexo 对于路径中的特殊字符`~\`!@#$%^&*()-_+={}|\;:"'<>,.? `以及空格，这些全部会被替换成` -`
+```yaml
+category_map:
+  计算机科学 : computer-science
+  C++ : cpp
+  郑莉老师C++语言程序设计: course-1
+  Linux : Linux
+```
+2,设置文章所属的目录
+> `source/_posts`为上传文章的保存目录，为默认
+> `categories`的设置要根据上面的`category_map`以及文件顺序顺序书写，
+> 此文件位于计算机科学 `/C++/郑莉老师C++语言程序设计` 目录下
+> 根据上面的映射在存储文件的`_posts`文件路径下就位于 `source/_posts` 下`computer-science/cpp/course-1 `目录下
+```yaml
+categories:
+- [计算机科学, C++, 郑莉老师C++语言程序设计]
+```
+![如图所示的布局](https://github.com/foryouos/shokaX-docs/assets/58133210/f8d8c514-61f1-4495-bb24-1a52a654f797 "如图所示的布局")
+
+3,如上图所示，在最底部的文件目录方式`cover.jpg` 文件,此图片将作为首页精选的图片。自此`文章精选`和`鼠标悬浮翻转`也将实现
+
+
 ### 实验性特性
 :::tip
 实验性特性均不稳定，随时可能引入破坏性更改，且部分有明显副作用
