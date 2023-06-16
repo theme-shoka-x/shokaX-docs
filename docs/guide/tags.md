@@ -1,13 +1,13 @@
 # 文章内嵌标签
 ## MD标签
 ## 基础配置
-> title   :文章标题
-> date    :文章发布时间
-> comment : 是否关闭文章评论
-> sticky  : true 文章置顶 多篇文章按照发布时间倒序排列，不分页
-> tags    : 文章标签
-> cover   ：文章轮播图(覆盖全局)文章封面
-> audio   : 文章背景音乐(覆盖全局) false 关闭背景音乐
+* title   :文章标题
+* date    :文章发布时间
+* comment : 是否关闭文章评论
+* sticky  : true 文章置顶 多篇文章按照发布时间倒序排列，不分页
+* tags    : 文章标签
+* cover   ：文章轮播图(覆盖全局)文章封面
+* audio   : 文章背景音乐(覆盖全局) false 关闭背景音乐
 ```markdown
 title: 文章标题
 date: 文章发布的时间
