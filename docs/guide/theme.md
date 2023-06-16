@@ -57,7 +57,37 @@ social:
 - `link`: 社交网站链接
 - `logo`: 社交网站logo
 - `color`: 社交网站logo颜色，选填(不填为字体颜色)
+### 边栏设置
+> 可以选择左侧或右侧，修改头像文件，在静态文件目录asserts中配置
 
+```yaml
+sidebar:
+  position: right  # left
+  avatar: avatar.jpg
+```
+### 底部设置
+> 开启后在页面底部显示随机文章和最近评论
+
+```yaml
+widgets:
+  #  
+  random_posts: true  # 随机文章
+  recent_comments: true  # 显示最近评论
+```
+### 字数和阅读时间统计
+> 安装 `hexo-symbols-count-time`后，
+```yaml
+# 页尾全站统计
+footer:
+  since: 2010  # 开始时间
+  count: true  # 开启
+# 文章界面统计
+post:
+  count: true   # 开启
+```
+![image](https://github.com/foryouos/shokaX-docs/assets/58133210/3d81cebf-0a39-4fa7-8ea1-d64dacc3a6cc)
+
+### 
 ### performance设置
 ```yaml
 performance:
@@ -130,6 +160,22 @@ nofollow:
     - 'exclude1.com'
     - 'exclude2.com'
 ```
+### 夜间模式
+```yaml
+darkmode: # true
+```
+默认情况下，是否开启夜间模式取决于(优先级从高到低)
+* 访客点击头部自行选择
+* 浏览器设置主题色调
+* darkmode配置
+### 自动定位
+> 开启后默认情况下，再次打开页面，会自动滚动到上次浏览的位置
+
+```yaml
+auto_scroll: false
+```
+
+
 ### 实验性特性
 :::tip
 实验性特性均不稳定，随时可能引入破坏性更改，且部分有明显副作用
@@ -203,6 +249,7 @@ ja:
 * alipay.png  # 支付宝付款码
 * wechatpay.png # 微信收款码
 * paypal.png  # PayPal的收款码
+* search.png  # 搜索下面显示的图片
 
 #### 网站轮播图自定义
 * 在上面的_data 目录下创建 images.yml
