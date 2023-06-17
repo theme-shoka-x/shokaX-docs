@@ -74,6 +74,19 @@ $dom.each('.post.block p.gallery', (element) => {
 #### 返回类型
 - `HTMLElement`: 新创建的子元素
 
+#### 示例(节选自ShokaX page ts)
+```typescript
+const BODY = document.getElementsByTagName('body')[0]
+let siteSearch
+
+if (!siteSearch) {
+  siteSearch = BODY.createChild('div', {
+    id: 'search',
+    innerHTML: '<div class="inner"><div class="header"><span class="icon"><i class="ic i-search"></i></span><div class="search-input-container"></div><span class="close-btn"><i class="ic i-times-circle"></i></span></div><div class="results"><div class="inner"><div id="search-stats"></div><div id="search-hits"></div><div id="search-pagination"></div></div></div></div>'
+  })
+}
+```
+
 ### HTMLElement.prototype.wrapObject
 使用用一个新的div元素包裹 `this`
 #### 接受参数
@@ -81,6 +94,15 @@ $dom.each('.post.block p.gallery', (element) => {
 
 #### 返回类型
 - `void`
+
+#### 示例(节选自ShokaX page ts)
+```typescript
+$dom.each('.md table', (element) => {
+  element.wrapObject({
+    className: 'table-container'
+  })
+})
+```
 
 ### HTMLElement.prototype.changeOrGetHeight
 改变或获取 `this` 的高度
@@ -123,6 +145,18 @@ $dom.each('.post.block p.gallery', (element) => {
   - `EventTarget`: `value` 既不为 `null` 也不为 `undefined`，返回 `this` (自身)
   - `string`: `value` 为 `undefined` 或省略该参数，返回具有 `type` 名称的属性的属性值
 
+#### 示例(节选自ShokaX page ts)
+```typescript
+if ((info = element.attr('title'))) {
+  $imageWrapLink.attr('data-caption', info)
+  const para = document.createElement('span')
+  const txt = document.createTextNode(info)
+  para.appendChild(txt)
+  para.addClass(captionClass)
+  element.insertAfter(para)
+}
+```
+
 ### HTMLElement.prototype.insertAfter
 在 `this` 之后插入另一个元素
 #### 接受参数
@@ -140,6 +174,17 @@ $dom.each('.post.block p.gallery', (element) => {
 - `string | EventTarget`: 根据 `d` 的值而变化:
   - `string`: 省略 `d`，返回 `this` 的 `display` 属性
   - `EventTarget`: 传入 `d`，返回 `this` (自身)
+
+#### 示例(节选自ShokaX page ts)
+```typescript
+if (qr.display() === 'inline-flex') {
+  transition(qr, 0)
+} else {
+  transition(qr, 1, () => {
+    qr.display('inline-flex')
+  }) // slideUpBigIn
+}
+```
 
 ### HTMLElement.prototype.child
 找到 `this` 首个符合selector选择器的子节点
