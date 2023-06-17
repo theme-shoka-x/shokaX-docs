@@ -40,7 +40,8 @@ export default {
       children: [
         {text: "术语表及说明",link: "/develop/interface/"},
         {text: "dom辅助函数",link: "/develop/interface/dom.html"},
-        {text: "storage辅助函数",link: "/develop/interface/storage.html"}
+        {text: "storage辅助函数",link: "/develop/interface/storage.html"},
+        {text: "theme-shokax-anime",link: "/develop/interface/anime.html"}
       ]
     }
   ]

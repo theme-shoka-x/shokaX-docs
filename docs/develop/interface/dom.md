@@ -4,7 +4,7 @@
 ## $dom系
 ### $dom
 适用于获取满足CSS选择器的首个HTML节点，当使用id获取时为 `getElementById` 获取，其他情况为 `querySelector` 获取
-#### 接受参数
+#### 接收参数
 - `selector: string`: CSS选择器
 - `element: Document`: (可选，默认为document)查询父节点
 
@@ -22,7 +22,7 @@ article.innerHTML = '<p>Hello world</p>'
 ### $dom.all
 使用 `querySelectorAll` 返回所有符合条件的节点，一般不直接使用此函数
 
-#### 接受参数
+#### 接收参数
 - `selector: string`: CSS选择器
 - `element: Document`: (可选，默认为document)查询父节点
 
@@ -32,7 +32,7 @@ article.innerHTML = '<p>Hello world</p>'
 ### $dom.each
 遍历所有符合选择器的节点并执行callback
 
-#### 接受参数
+#### 接收参数
 - `selector: string`: CSS选择器
 - `callback: (value: HTMLElement, key?: number, parent?: NodeListOf<Element>) => void`: 回调参数
 - `element: Document`: (可选，默认为document)查询父节点
@@ -63,7 +63,7 @@ $dom.each('.post.block p.gallery', (element) => {
 原型注入系通过设置 `HTMLElement.prototype` 来注入API
 ### HTMLElement.prototype.createChild
 创建一个HTML元素并放置
-#### 接受参数
+#### 接收参数
 - `tag: string`: 要创建的HTML元素的标签名(如，'div'，'span'等)
 - `obj: Object`: 包含要应用于新创建的HTML元素的属性和值
 - `positon?: string`: (可选)表示新创建的HTML元素放置的位置。可选值:
@@ -89,7 +89,7 @@ if (!siteSearch) {
 
 ### HTMLElement.prototype.wrapObject
 使用用一个新的div元素包裹 `this`
-#### 接受参数
+#### 接收参数
 - `obj: Object`: 包含要应用于新创建的div元素的属性和值
 
 #### 返回类型
@@ -106,7 +106,7 @@ $dom.each('.md table', (element) => {
 
 ### HTMLElement.prototype.changeOrGetHeight
 改变或获取 `this` 的高度
-#### 接受参数
+#### 接收参数
 - `h: number | string`: (可选)如果提供了该参数，则将 `this` 的高度设置为该值。如果类型为数字，则将其转换为字符串并添加'rem'单位；否则，直接使用该值
 
 #### 返回类型
@@ -114,7 +114,7 @@ $dom.each('.md table', (element) => {
 
 ### HTMLElement.prototype.changeOrGetWidth
 改变或获取 `this` 的宽度
-#### 接受参数
+#### 接收参数
 - `w: number | string`: (可选)如果提供了该参数，则将 `this` 的宽度设置为该值。如果类型为数字，则将其转换为字符串并添加'rem'单位；否则，直接使用该值
 
 #### 返回类型
@@ -132,15 +132,15 @@ $dom.each('.md table', (element) => {
 
 ### HTMLElement.prototype.attr
 操作 `this` 的属性
-#### 接受参数
+#### 接收参数
 - `type: string`: 操作的属性名
-- `value: string`: (可选)属性值，可选值: 
+- `value: string`: (可选)属性值，可选值:
   - `null`: 删除具有 `type` 名称的属性
   - 存在(既不为 `null` 也不为 `undefined`): 为 `this` 中将 `type` 名称的属性设置为 `value`
   - `undefined` 或省略该参数: 返回具有 `type` 名称属性的属性值
 
 #### 返回类型
-- `void | EventTarget | string`: 根据 `value` 的值而变化: 
+- `void | EventTarget | string`: 根据 `value` 的值而变化:
   - `void`: `value` 为 `null`
   - `EventTarget`: `value` 既不为 `null` 也不为 `undefined`，返回 `this` (自身)
   - `string`: `value` 为 `undefined` 或省略该参数，返回具有 `type` 名称的属性的属性值
@@ -159,7 +159,7 @@ if ((info = element.attr('title'))) {
 
 ### HTMLElement.prototype.insertAfter
 在 `this` 之后插入另一个元素
-#### 接受参数
+#### 接收参数
 - `element: HTMLElement`: 插入的元素
 
 #### 返回类型
@@ -167,7 +167,7 @@ if ((info = element.attr('title'))) {
 
 ### HTMLElement.prototype.display
 设置/获得 `this` 的 `display` 属性
-#### 接受参数
+#### 接收参数
 - `d: string`: (可选)要设置给元素的显示状态，如果传入，则设置 `this` 的 `display` 属性为指定值
 
 #### 返回类型
@@ -188,7 +188,7 @@ if (qr.display() === 'inline-flex') {
 
 ### HTMLElement.prototype.child
 找到 `this` 首个符合selector选择器的子节点
-#### 接受参数
+#### 接收参数
 - `selector: string`: CSS选择器
 
 #### 返回类型
@@ -196,7 +196,7 @@ if (qr.display() === 'inline-flex') {
 
 ### HTMLElement.prototype.find
 找到 `this` 所有符合selector选择器的子节点
-#### 接受参数
+#### 接收参数
 - `selector: string`: CSS选择器
 
 #### 返回类型
@@ -204,7 +204,7 @@ if (qr.display() === 'inline-flex') {
 
 ### HTMLElement.prototype._class
 操作类名，一般不直接使用此函数
-#### 接受参数
+#### 接收参数
 - `type: string`: 执行的类名操作类型。可选值:
   - `add`
   - `remove`
@@ -218,7 +218,7 @@ if (qr.display() === 'inline-flex') {
 
 ### HTMLElement.prototype.addClass
 添加类名
-#### 接受参数
+#### 接收参数
 - `className: string`: 要操作的类名或类名列表
 
 #### 返回类型
@@ -226,7 +226,7 @@ if (qr.display() === 'inline-flex') {
 
 ### HTMLElement.prototype.removeClass
 移除类名
-#### 接受参数
+#### 接收参数
 - `className: string`: 要操作的类名或类名列表
 
 #### 返回类型
@@ -234,7 +234,7 @@ if (qr.display() === 'inline-flex') {
 
 ### HTMLElement.prototype.toggleClass
 切换类名
-#### 接受参数
+#### 接收参数
 - `className: string`: 要操作的类名或类名列表
 - `display: boolean`: (可选)设置元素是否强制添加或移除类，不管该类名是否存在
 
@@ -243,7 +243,7 @@ if (qr.display() === 'inline-flex') {
 
 ### HTMLElement.prototype.hasClass
 判断 `this` 中指定的类名是否存在
-#### 接受参数
+#### 接收参数
 - `className: string`: 要判断的类名或类名列表
 
 #### 返回类型
