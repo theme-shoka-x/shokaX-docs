@@ -10,9 +10,9 @@
 
 ShokaX API的可用分区:
 
-|     名称      |         含义          | 可用分区                |
-|:-----------:|:-------------------:|:--------------------|
-| hexo script |   Hexo 生成脚本可用API    | scripts目录及插件        |
-|   page ts   | 前端可用typescript API  | 注入时机在app.js之后的js/ts |
-|  head api   |      前端可用基本API      | 任何运行在前端的代码          |
-|   plugin    | 插件及ShokaX Utils API | 插件脚本中               |
+|      名称       |         含义          | 可用分区                |
+|:-------------:|:-------------------:|:--------------------|
+| `hexo script` |   Hexo 生成脚本可用API    | scripts目录及插件        |
+|   `page ts`   | 前端可用typescript API  | 注入时机在app.js之后的js/ts |
+|  `head api`   |      前端可用基本API      | 任何运行在前端的代码          |
+|   `plugin`    | 插件及ShokaX Utils API | 插件脚本中               |
