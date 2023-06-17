@@ -87,7 +87,6 @@ post:
 ```
 ![image](https://github.com/foryouos/shokaX-docs/assets/58133210/3d81cebf-0a39-4fa7-8ea1-d64dacc3a6cc)
 
-### 
 ### performance设置
 ```yaml
 performance:
