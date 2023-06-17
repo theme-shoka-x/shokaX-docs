@@ -75,7 +75,7 @@ widgets:
   recent_comments: true  # 显示最近评论
 ```
 ### 字数和阅读时间统计
-> 安装 `hexo-symbols-count-time`后，
+
 ```yaml
 # 页尾全站统计
 footer:
