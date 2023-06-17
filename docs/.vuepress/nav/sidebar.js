@@ -39,7 +39,8 @@ export default {
       collapsible: true,
       children: [
         {text: "术语表及说明",link: "/develop/interface/"},
-        {text: "dom辅助函数",link: "/develop/interface/dom.html"}
+        {text: "dom辅助函数",link: "/develop/interface/dom.html"},
+        {text: "storage辅助函数",link: "/develop/interface/storage.html"}
       ]
     }
   ]
