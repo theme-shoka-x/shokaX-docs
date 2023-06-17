@@ -1,6 +1,6 @@
 # 文章内嵌标签
 ## MD标签
-## 基础配置
+## Front-matter
 * title   :文章标题
 * date    :文章发布时间
 * comment : 是否关闭文章评论
