@@ -8,7 +8,7 @@
 * tags    : 文章标签
 * cover   ：文章轮播图(覆盖全局)文章封面
 * audio   : 文章背景音乐 (覆盖全局) 当设置为`false`时关闭背景音乐
-```markdown
+```yaml
 title: 文章标题
 date: 文章发布的时间
 comment: false   # 关闭本文章评论
