@@ -28,7 +28,6 @@ pnpm run build
 ShokaX的目录结构(仅包含对开发重要的部分)如下:
 ```text
 |- .github # issues模板、CI工作流等存储位置
-|- docs # 文档储存位置，使用vuepress
 |- languages # 国际化文件储存位置
 |- layout # 模板储存位置
 |- scripts # hexo脚本储存位置
@@ -37,6 +36,7 @@ ShokaX的目录结构(仅包含对开发重要的部分)如下:
 - tsconfig.json # typescript编译配置
 - .eslintrc.cjs # eslint配置
 - _config.yml # hexo主题配置文件
+- _images.yml # 图床配置文件
 ```
 
 ### 调试注意事项
