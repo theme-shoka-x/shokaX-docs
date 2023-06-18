@@ -85,7 +85,7 @@ footer:
 post:
   count: true   # 开启
 ```
-![image](https://github.com/foryouos/shokaX-docs/assets/58133210/3d81cebf-0a39-4fa7-8ea1-d64dacc3a6cc)
+![文章字数统计](./字数文章统计.png "文章字数统计")
 
 ### performance设置
 ```yaml
@@ -171,20 +171,20 @@ ja:
 ### 网站头像自定义
 * 在Hexo的根目录下source文件夹下
 * 进入_data目录 (如果没有创建)
-* 此时的要根据_config.shokaX.yml下面的自定义assets 图片目录，在_data创建对应的目录
+* 此时的要根据`_config.shokaX.yml`下面的自定义`assets` 图片目录，在`_data`创建对应的目录
 * 不同的文件名称即可替代对应的图片
 
-* avatar.jpg  # 默认情况下对应的是主页上的个人头像
-* favicon.ico  # 网站标题左边成功呈现的头像logo
-* apple-touch-icon.png # 网站图标的png格式即可
-* failure.ico  # 网站隐藏窗台呈现的图标
-* alipay.png  # 支付宝付款码
-* wechatpay.png # 微信收款码
-* paypal.png  # PayPal的收款码
-* search.png  # 搜索下面显示的图片
+* `avatar.jpg ` # 默认情况下对应的是主页上的个人头像
+*` favicon.ico`  # 网站标题左边成功呈现的头像logo
+* `apple-touch-icon.png` # 网站图标的png格式即可
+* `failure.ico`  # 网站隐藏窗台呈现的图标
+* `alipay.png`  # 支付宝付款码
+* `wechatpay.png` # 微信收款码
+* `paypal.png`  # PayPal的收款码
+* `search.png`  # 搜索下面显示的图片
 
 ### 网站轮播图自定义
-* 在上面的_data 目录下创建 images.yml
+* 在上面的`_data` 目录下创建 `images.yml`
 * 在文件内存入轮播图图片即可替换原本自带的轮播图
 * 类似如下，可存入图床当中
 ```yaml
@@ -218,7 +218,7 @@ category_map:
 categories:
 - [计算机科学, C++, 郑莉老师C++语言程序设计]
 ```
-![如图所示的布局](https://github.com/foryouos/shokaX-docs/assets/58133210/f8d8c514-61f1-4495-bb24-1a52a654f797 "如图所示的布局")
+![如图所示的布局](./目录设置.png "如图所示的布局")
 
 3,如上图所示，在最底部的文件目录方式`cover.jpg` 文件,此图片将作为首页精选的图片。自此`文章精选`和`鼠标悬浮翻转`也将实现
 
