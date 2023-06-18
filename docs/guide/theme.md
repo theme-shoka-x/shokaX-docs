@@ -57,6 +57,35 @@ social:
 - `link`: 社交网站链接
 - `logo`: 社交网站logo
 - `color`: 社交网站logo颜色，选填(不填为字体颜色)
+### 边栏设置
+> 可以选择左侧或右侧，修改头像文件，在静态文件目录asserts中配置
+
+```yaml
+sidebar:
+  position: right  # left
+  avatar: avatar.jpg
+```
+### 底部设置
+> 开启后在页面底部显示随机文章和最近评论
+
+```yaml
+widgets:
+  #  
+  random_posts: true  # 随机文章
+  recent_comments: true  # 显示最近评论
+```
+### 字数和阅读时间统计
+
+```yaml
+# 页尾全站统计
+footer:
+  since: 2010  # 开始时间
+  count: true  # 开启
+# 文章界面统计
+post:
+  count: true   # 开启
+```
+![文章字数统计](./字数文章统计.png "文章字数统计")
 
 ### performance设置
 ```yaml
@@ -88,73 +117,22 @@ seo只需要在对应搜索引擎后填入验证码即可(域名验证->meta验�
 visitor需要填入对应项目的许可码，一般包含在js文件/script标签中 
 例如clarity一般是js代码中function的第五个参数，百度统计是`?hm=`后面的代码
 
-#### 百度SEO
-> 让npm自动生成网站的sitemap并提交到百度或其它搜索引擎
 
-* 安装相关的插件
-```shell
-npm install hexo-generator-sitemap --save     
-npm install hexo-generator-baidu-sitemap --save
-```
-* 修改并添加在根目录下_config.yml
+### 夜间模式
 ```yaml
-#在deploy下加入type : 
-deploy:
-  - type : baidu_url_submitter
-# 自动生成sitemap 此文件可以提交必应Google等
-sitemap:
- path: sitemap.xml
-# 生成百度的sitemap
-baidusitemap:
- path: baidusitemap.xml
-# 百度提交
-baidu_url_submit:
-  count: 100
-  host: #必填 您的完整网址
-  token: # 必填  API提交百度所需要的token值，在百度站长之家获取
-  path: baidu_urls.txt  # 会生成的urltxt文件
+darkmode: # true
 ```
-#### nofollow插件
-> 自动为Hexo博客中的外键添加`rel="external nofollow noreferrer"从而改善网站SEO
+默认情况下，是否开启夜间模式取决于(优先级从高到低)
+* 访客点击头部自行选择
+* 浏览器设置主题色调
+* darkmode配置
+### 自动定位
+> 开启后默认情况下，再次打开页面，会自动滚动到上次浏览的位置
 
-* 安装
-```shell
-npm i hexo-filter-nofollow --save
-```
-* 配置根目录config.yml文件
 ```yaml
-nofollow:
-  enable: true  # 是否启用插件
-  field: site   # 查看处理范围,post仅处理文章,site 处理全站所有内容
-  exclude:  # 域名白名单
-    - 'exclude1.com'
-    - 'exclude2.com'
+auto_scroll: false
 ```
-### 实验性特性
-:::tip
-实验性特性均不稳定，随时可能引入破坏性更改，且部分有明显副作用
-:::
-#### 长文章优化
-```yaml
-experiments:
-  optimizeLongPosts: true # 开启长文章优化
-```
-当文章过长时(≥5万字)，文章页面的FPS会下降到10FPS左右，部分渲染性能较差的设备还会出现假死现象。 \
-此问题在 shoka 时期就已存在，因此 shokaX 引入了长文章优化，底层原理是使用`content-visibility`暴力缩短渲染范围以大幅提高性能。
-:::tip
-实验室数据显示在2万字时FPS便会出现波动，3万字时就可以感觉到波动了，5万字时页面已经十分卡顿。
-如果页面有大量Katex公式则此问题会更严重
-:::
-
-实验室数据显示此选项可将FPS由10提升到25左右(4x CPU slowdown)并解决卡死问题，但此功能存在`导航栏抖动`和`进度条抖动`问题，可能影响到浏览体验。
-- 导航栏抖动：在滑动时导航栏会反复弹出收回，时间较短(一般不超过1s)
-- 进度条抖动：返回顶部的文字和滑动条的长度与文章实际长度不符，存在±1-5%的误差
-
-上述问题均是由于此方法导致的`window.scrollY`抖动引起的，如果你有好的解决方法欢迎发起PR。
-因此，长文章优化功能仅建议在有文章字数超过3万字或站点主要面向渲染性能较差的设备时启用。
-
-### 杂项设置
-#### 网站标题自定义
+### 网站标题自定义
 > 自动网站点击之后和隐藏之后的标题，可覆盖原本呈现的文字
 * 在Hexo的根目录下source文件夹下
 * 进入_data目录 (如果没有创建)
@@ -190,22 +168,23 @@ ja:
 ```
 * 保存文件即可
 
-#### 网站头像自定义
+### 网站头像自定义
 * 在Hexo的根目录下source文件夹下
 * 进入_data目录 (如果没有创建)
-* 此时的要根据_config.shokaX.yml下面的自定义assets 图片目录，在_data创建对应的目录
+* 此时的要根据`_config.shokaX.yml`下面的自定义`assets` 图片目录，在`_data`创建对应的目录
 * 不同的文件名称即可替代对应的图片
 
-* avatar.jpg  # 默认情况下对应的是主页上的个人头像
-* favicon.ico  # 网站标题左边成功呈现的头像logo
-* apple-touch-icon.png # 网站图标的png格式即可
-* failure.ico  # 网站隐藏窗台呈现的图标
-* alipay.png  # 支付宝付款码
-* wechatpay.png # 微信收款码
-* paypal.png  # PayPal的收款码
+* `avatar.jpg ` # 默认情况下对应的是主页上的个人头像
+*` favicon.ico`  # 网站标题左边成功呈现的头像logo
+* `apple-touch-icon.png` # 网站图标的png格式即可
+* `failure.ico`  # 网站隐藏窗台呈现的图标
+* `alipay.png`  # 支付宝付款码
+* `wechatpay.png` # 微信收款码
+* `paypal.png`  # PayPal的收款码
+* `search.png`  # 搜索下面显示的图片
 
-#### 网站轮播图自定义
-* 在上面的_data 目录下创建 images.yml
+### 网站轮播图自定义
+* 在上面的`_data` 目录下创建 `images.yml`
 * 在文件内存入轮播图图片即可替换原本自带的轮播图
 * 类似如下，可存入图床当中
 ```yaml
@@ -220,3 +199,51 @@ ja:
 - https://i.imgtg.com/2023/03/09/Y0kTl.jpg
 - https://i.imgtg.com/2023/03/09/Y0hOs.jpg
 ```
+### 首页精选与分类翻转块
+1, 修改站点配置，在Hexo根目录`_config.yml`中找到`category_map`,配置每个分类对应的英文映射
+> Hexo 对于路径中的特殊字符`~\`!@#$%^&*()-_+={}|\;:"'<>,.? `以及空格，这些全部会被替换成` -`
+```yaml
+category_map:
+  计算机科学 : computer-science
+  C++ : cpp
+  郑莉老师C++语言程序设计: course-1
+  Linux : Linux
+```
+2,设置文章所属的目录
+> `source/_posts`为上传文章的保存目录，为默认
+> `categories`的设置要根据上面的`category_map`以及文件顺序顺序书写，
+> 此文件位于计算机科学 `/C++/郑莉老师C++语言程序设计` 目录下
+> 根据上面的映射在存储文件的`_posts`文件路径下就位于 `source/_posts` 下`computer-science/cpp/course-1 `目录下
+```yaml
+categories:
+- [计算机科学, C++, 郑莉老师C++语言程序设计]
+```
+![如图所示的布局](./目录设置.png "如图所示的布局")
+
+3,如上图所示，在最底部的文件目录方式`cover.jpg` 文件,此图片将作为首页精选的图片。自此`文章精选`和`鼠标悬浮翻转`也将实现
+
+
+### 实验性特性
+:::tip
+实验性特性均不稳定，随时可能引入破坏性更改，且部分有明显副作用
+:::
+### 长文章优化
+```yaml
+experiments:
+  optimizeLongPosts: true # 开启长文章优化
+```
+当文章过长时(≥5万字)，文章页面的FPS会下降到10FPS左右，部分渲染性能较差的设备还会出现假死现象。 \
+此问题在 shoka 时期就已存在，因此 shokaX 引入了长文章优化，底层原理是使用`content-visibility`暴力缩短渲染范围以大幅提高性能。
+:::tip
+实验室数据显示在2万字时FPS便会出现波动，3万字时就可以感觉到波动了，5万字时页面已经十分卡顿。
+如果页面有大量Katex公式则此问题会更严重
+:::
+
+实验室数据显示此选项可将FPS由10提升到25左右(4x CPU slowdown)并解决卡死问题，但此功能存在`导航栏抖动`和`进度条抖动`问题，可能影响到浏览体验。
+- 导航栏抖动：在滑动时导航栏会反复弹出收回，时间较短(一般不超过1s)
+- 进度条抖动：返回顶部的文字和滑动条的长度与文章实际长度不符，存在±1-5%的误差
+
+上述问题均是由于此方法导致的`window.scrollY`抖动引起的，如果你有好的解决方法欢迎发起PR。
+因此，长文章优化功能仅建议在有文章字数超过3万字或站点主要面向渲染性能较差的设备时启用。
+
+### 杂项设置
