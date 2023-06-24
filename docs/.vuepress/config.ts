@@ -4,6 +4,7 @@ import {defaultTheme, defineUserConfig} from 'vuepress'
 import { sitemapPlugin } from "vuepress-plugin-sitemap2"
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 export default defineUserConfig({
     plugins: [
@@ -23,6 +24,9 @@ export default defineUserConfig({
         }),
         shikiPlugin({
             theme: "dark-plus"
+        }),
+        googleAnalyticsPlugin({
+            id: "G-LTTY0HV9Z3"
         })
     ],
     lang: 'zh-CN',

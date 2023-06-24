@@ -20,7 +20,7 @@ export default [
         link: '/develop/interface/'
     },
     {
-        text: '赞助',
-        link: '/sponsor'
+        text: '更新日志',
+        link: '/changelog'
     }
 ]
