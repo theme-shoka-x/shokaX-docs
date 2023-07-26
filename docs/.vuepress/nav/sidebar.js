@@ -31,7 +31,8 @@ export default {
       text: "开发指南",
       collapsible: true,
       children: [
-        {text: "快速上手",link: "/develop/basic/"}
+        {text: "快速上手",link: "/develop/basic/"},
+        {text: "如何编写插件",link: "/develop/basic/plugin.html"}
       ]
     },
     {

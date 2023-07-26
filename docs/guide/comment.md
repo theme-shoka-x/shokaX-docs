@@ -66,7 +66,8 @@ gitalk:
 ```
 :::
 
-## 添加评论案例
+## 添加评论系统详细教程
+### waline
 > 使用waline评论系统 Zeabur服务端作为部署
 > Zeabur的控制台国内好像打不开(我没打开),但是生成的Domains要比Vercel的速度快很多
 

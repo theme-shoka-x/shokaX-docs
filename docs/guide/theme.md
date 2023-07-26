@@ -10,7 +10,8 @@ css: "css" # css存放目录(不建议改动)
 js: "js" # js存放目录(不建议改动)
 ```
 
-### 导航栏
+### 侧边栏和导航
+#### 导航栏
 ```yaml
 menu:
   home: / || home
@@ -29,7 +30,7 @@ menu:
    - `default`为dropbox显示的内容，不建议在此处放置超链接地址(建议设置为`/`)
    - 剩余部分为n个不重复的独立导航链接
 
-### 社交链接
+#### 社交链接
 ```yaml
 social:
    github: https://github.com/name || github || "#191717"
@@ -57,7 +58,7 @@ social:
 - `link`: 社交网站链接
 - `logo`: 社交网站logo
 - `color`: 社交网站logo颜色，选填(不填为字体颜色)
-### 边栏设置
+#### 边栏设置
 > 可以选择左侧或右侧，修改头像文件，在静态文件目录asserts中配置
 
 ```yaml
@@ -65,7 +66,9 @@ sidebar:
   position: right  # left
   avatar: avatar.jpg
 ```
-### 底部设置
+
+### 页脚设置
+#### 底部设置
 > 开启后在页面底部显示随机文章和最近评论
 
 ```yaml
@@ -74,7 +77,7 @@ widgets:
   random_posts: true  # 随机文章
   recent_comments: true  # 显示最近评论
 ```
-### 字数和阅读时间统计
+#### 字数和阅读时间统计
 
 ```yaml
 # 页尾全站统计
@@ -168,7 +171,8 @@ ja:
 ```
 * 保存文件即可
 
-### 网站头像自定义
+### 图片自定义
+#### 网站头像自定义
 * 在Hexo的根目录下source文件夹下
 * 进入_data目录 (如果没有创建)
 * 此时的要根据`_config.shokaX.yml`下面的自定义`assets` 图片目录，在`_data`创建对应的目录
@@ -183,7 +187,7 @@ ja:
 * `paypal.png`  # PayPal的收款码
 * `search.png`  # 搜索下面显示的图片
 
-### 网站轮播图自定义
+#### 网站轮播图自定义
 * 在上面的`_data` 目录下创建 `images.yml`
 * 在文件内存入轮播图图片即可替换原本自带的轮播图
 * 类似如下，可存入图床当中
