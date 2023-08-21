@@ -11,6 +11,14 @@ export default hopeTheme({
         prismjs: false,
         mdEnhance: {
             codetabs: true
+        },
+        feed: {
+            rss: true
+        },
+        // TODO 配置icon
+        pwa: {
+            cachePic: true,
+            update: "available"
         }
     },
     pure: true,
