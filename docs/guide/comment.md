@@ -72,7 +72,7 @@ gitalk:
 > Zeabur的控制台国内好像打不开(我没打开),但是生成的Domains要比Vercel的速度快很多
 
 ![云服务器对比](https://github.com/foryouos/shokaX-docs/assets/58133210/882899f3-5050-4b61-ace9-5ea6933a9217 "来源Twikoo文档对各服务器的对比")
-* Zeabur服务端部署，[官方简洁](https://waline.js.org/guide/deploy/zeabur.html) 一步一步来，到最后可以通过Domains打开评论即可
+* Zeabur服务端部署，[官方简介](https://waline.js.org/guide/deploy/zeabur.html) 一步一步来，到最后可以通过Domains打开评论即可
 > 部署时间会长一点5分钟左右，耐心等待，部署running之后，要生成Domains，并打开Doamins测试，成功即可
 
 * 配置根目录下_config.shokaX.yml的评论系统
