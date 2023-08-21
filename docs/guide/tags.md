@@ -116,8 +116,8 @@ quiz: true
 - `color`: 需要使用双引号包裹，值为大写的16进制颜色代码
 
 在文章中使用:
-:::: code-group
-::: code-group-item 文章内嵌
+::: code-tabs#shell
+@tab 文章内嵌
 ```text
 {% links %}
 - site: # 主标题
@@ -129,8 +129,8 @@ quiz: true
 # 多链接参考yaml列表格式
 {% endlinks %}
 ```
-:::
-::: code-group-item 外部文件
+
+@tab 外部文件
 ```text
 # path为一个yaml文件
 {% linksfile [path] %}
@@ -145,4 +145,3 @@ quiz: true
   color: # 站点颜色(选填)
 ```
 :::
-::::

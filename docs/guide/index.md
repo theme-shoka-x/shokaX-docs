@@ -9,17 +9,16 @@ ShokaX-CLI 目前版本不负责处理 hexo 环境，请自行`hexo init`
 ## 安装主题
 ### 使用ShokaX-CLI
 安装 ShokaX-CLI:
-:::: code-group
-::: code-group-item npm
+::: code-tabs#shell
+@tab npm
 ```shell
 # hexo init
 npm install shokax-cli --location=global
 # cd your_blog
 SXC install shokaX
 ```
-:::
 
-::: code-group-item pnpm
+@tab pnpm
 ```shell
 # hexo init
 pnpm add shokax-cli --location=global
@@ -27,7 +26,6 @@ pnpm add shokax-cli --location=global
 SXC install shokaX
 ```
 :::
-::::
 :::tip
 SXC默认从npm安装主题，如果自定义的部分较多可以从github安装:
 `SXC install -r=github shokaX`
@@ -41,8 +39,8 @@ ShokaX不建议使用手动安装，仅应该在SXC无法正常安装的时候�
 
 指令如下:
 
-:::: code-group
-::: code-group-item npm
+::: code-tabs#shell
+@tab npm
 
 ```shell
 npm i hexo-theme-shokax
@@ -52,8 +50,7 @@ npm i hexo-algoliasearch
 npm i hexo-feed
 ```
 
-:::
-::: code-group-item yarn
+@tab yarn
 
 ```shell
 yarn add hexo-theme-shokax
@@ -63,19 +60,17 @@ yarn add hexo-algoliasearch
 yarn add hexo-feed
 ```
 
-:::
-::: code-group-item pnpm
 
-```shell [pnpm]
+@tab pnpm
+
+```shell
 pnpm add hexo-theme-shokax
 pnpm add hexo-renderer-multi-next-markdown-it
 pnpm add hexo-autoprefixer
 pnpm add hexo-algoliasearch
 pnpm add hexo-feed
 ```
-
 :::
-::::
 
 ## 配置主题
 :::warning

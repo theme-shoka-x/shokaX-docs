@@ -2,17 +2,16 @@
 ## 重新安装主题
 先卸载`hexo-renderer-multi-markdown-it`
 随后运行SXC安装主题
-:::: code-group
-::: code-group-item npm
+::: code-tabs#shell
+@tab npm
 ```shell
 # hexo init
 npm install shokax-cli --location=global
 # cd your_blog
 SXC install shokaX
 ```
-:::
 
-::: code-group-item pnpm
+@tab pnpm
 ```shell
 # hexo init
 pnpm add shokax-cli --location=global
@@ -20,7 +19,6 @@ pnpm add shokax-cli --location=global
 SXC install shokaX
 ```
 :::
-::::
 
 ## 配置修改
 首先，建议使用`_config.shokaX.yml`而非直接修改主题`_config.yml` \

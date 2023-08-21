@@ -24,7 +24,4 @@ features:
     details: 从shoka迁移到shokaX较为容易，仅需修改几项配置并重新安装npm包即可实现
   - title: 功能丰富
     details: shokaX提供了原生PWA、多种评论系统、小组件等开箱即用的功能
-
-footer: <a href="https://beian.miit.gov.cn/" target="_blank">津ICP备2022001375号</a>
-footerHtml: true
 ---
