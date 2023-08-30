@@ -8,7 +8,8 @@ export default {
                 {text: "更多配置",link: "/guide/config.html"},
                 {text: "主题配置",link: "/guide/theme.html"},
                 {text: "评论系统",link: "/guide/comment.html"},
-                {text: "内容模块",link: "/guide/tags.html"}
+                {text: "内容模块",link: "/guide/tags.html"},
+                {text: "错误代码",link: "/guide/error-code.html"}
             ]
         },
         {

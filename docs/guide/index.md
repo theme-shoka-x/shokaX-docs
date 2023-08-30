@@ -40,15 +40,6 @@ ShokaX不建议使用手动安装，仅应该在SXC无法正常安装的时候�
 指令如下:
 
 ::: code-tabs#shell
-@tab npm
-
-```shell
-npm i hexo-theme-shokax
-npm i hexo-renderer-multi-next-markdown-it
-npm i hexo-autoprefixer
-npm i hexo-algoliasearch
-npm i hexo-feed
-```
 
 @tab yarn
 
@@ -58,6 +49,10 @@ yarn add hexo-renderer-multi-next-markdown-it
 yarn add hexo-autoprefixer
 yarn add hexo-algoliasearch
 yarn add hexo-feed
+yarn add esbuild
+yarn add theme-shokax-pjax
+yarn add theme-shokax-anime
+yarn add lozad
 ```
 
 
@@ -69,6 +64,10 @@ pnpm add hexo-renderer-multi-next-markdown-it
 pnpm add hexo-autoprefixer
 pnpm add hexo-algoliasearch
 pnpm add hexo-feed
+pnpm add esbuild
+pnpm add theme-shokax-pjax
+pnpm add theme-shokax-anime
+pnpm add lozad
 ```
 :::
 
