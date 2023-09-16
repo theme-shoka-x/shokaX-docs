@@ -4,12 +4,12 @@ home: true
 heroText: ShokaX
 tagline: 高度可定制的Hexo主题，让你的博客与众不同
 actions:
-    - type: primary
-      text: 快速上手
-      link: /guide/
-    - type: secondary
-      text: 二次开发
-      link: /develop/basic/
+  - type: primary
+    text: 快速上手
+    link: /guide/
+  - type: secondary
+    text: 二次开发
+    link: /develop/basic/
 
 features:
   - title: 简单易用
