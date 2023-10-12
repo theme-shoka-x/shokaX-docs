@@ -4,10 +4,10 @@
 
 在开始之前，你应该已经安装了如下软件:
 
-- nodejs 18 以上
+- Node.js 18 以上
 - hexo-cli 的 latest 版本
 
-ShokaX-CLI 目前版本不负责处理 hexo 环境，请自行`hexo init`
+ShokaX-CLI 目前版本不负责处理 hexo 环境，请自行 `hexo init`。
 
 ## 安装主题
 
@@ -146,8 +146,8 @@ syntax_highlighter: false
 ```
 
 :::warning
-在 0.2.5 及以下的版本中，如果您把 ShokaX 网站部署到了 cloudflare CDN 支持的服务上，请关闭`rocket-loader`，此功能与 ShokaX 的 page ts 存在冲突，会导致页面在 loading 时卡死 \
-0.2.6 已修复此问题，可开启`rocket-loader`功能
+在 0.2.5 及以下的版本中，如果您把 ShokaX 网站部署到了 cloudflare CDN 支持的服务上，请关闭`rocket-loader`，此功能与 ShokaX 的 page ts 存在冲突，会导致页面在 loading 时卡死。 \
+0.2.6 已修复此问题，可开启`rocket-loader`功能。
 :::
 
-现在 shokaX 已经可以正常运行了,`hexo s`即可
+现在 shokaX 已经可以正常运行了，`hexo s` 即可。

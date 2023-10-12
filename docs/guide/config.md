@@ -30,9 +30,9 @@ minify:
 
 ## feed 生成
 
-此部分对 feed 文件进行配置，生成`rss`、`atom`、`feed.json`等文件
+此部分对 feed 文件进行配置，生成 `rss`、`atom`、`feed.json` 等文件。
 :::tip
-一般情况选择`npm(SXC) origin`即可，如果是 github 源安装则需要使用`github origin`
+一般情况选择 `npm(SXC) origin` 即可，如果是 github 源安装则需要使用 `github origin`。
 :::
 ::: code-tabs#shell
 @tab github
@@ -83,7 +83,7 @@ feed:
 
 ## algolia 搜索
 
-此部分为站内搜索配置
+此部分为站内搜索配置。
 
 ```yaml
 algolia:
@@ -104,9 +104,9 @@ algolia:
 
 ### 配置流程
 
-- 登录 [Algolia](https://www.algolia.com/) 官网，建议使用 Github/Google 账号注册/登录
-- 进入 `Dashboard` - `Search` - `Index` 页面，选择上方 `+ Create Index` 创建索引，索引名称建议为 `shokaX`
-- 进入 `Dashboard` - `Settings` - `API Keys` 页面，复制如下数据到上方配置中
+- 登录 [Algolia](https://www.algolia.com/) 官网，建议使用 Github/Google 账号注册/登录。
+- 进入 `Dashboard` - `Search` - `Index` 页面，选择上方 `+ Create Index` 创建索引，索引名称建议为 `shokaX`。
+- 进入 `Dashboard` - `Settings` - `API Keys` 页面，复制如下数据到上方配置中。
 
 | 页面数据              | 对应配置      |
 | :-------------------- | :------------ |
@@ -115,8 +115,9 @@ algolia:
 | `Admin API Key`       | `adminApiKey` |
 | 创建的索引名          | `indexName`   |
 
-- 在博客部署前运行 `hexo algolia` 上传索引，可在 `Dashboard` - `Search` - `Index` 页面中查看
+- 在博客部署前运行 `hexo algolia` 上传索引，可在 `Dashboard` - `Search` - `Index` 页面中查看。
 
 :::warning
 请勿将 `apiKey` 和 `adminApiKey` 混用，否则索引可能被攻击！
 :::
+

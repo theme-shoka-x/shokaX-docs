@@ -2,12 +2,11 @@
 
 ## 前言
 
-如果你从 shoka 迁移，请注意 shokaX 已经删除了对于`minivaline`的支持，因为`minivaline`储存库已存档(停止维护)，建议使用`waline`代替 \
-ShokaX 不会对`valine`提供支持，因为`valine`评论系统存在严重的安全问题，且`1.4.0`后 valine 不再开源
+如果你从 shoka 迁移，请注意 shokaX 已经删除了对于 `minivaline` 的支持，因为 `minivaline` 储存库已存档（停止维护），建议使用 `waline` 代替。ShokaX 不会对 `valine` 提供支持，因为 `valine` 评论系统存在严重的安全问题，且 `1.4.0` 后 valine 不再开源。
 
 ## valine 系评论系统
 
-以下是在解决 valine 遗留问题同一时期产生的评论系统故归为一类, 然在其社区 issue 中也报告了类似的攻击事件,故请谨慎选择.
+以下是在解决 valine 遗留问题同一时期产生的评论系统故归为一类，然在其社区 issue 中也报告了类似的攻击事件，故请谨慎选择。
 ::: details waline
 [waline](https://waline.js.org/) 一款简洁、安全的评论系统。
 配置内容如下:
@@ -57,7 +56,7 @@ twikoo:
 ## git 系评论系统
 
 此系列均使用 git 相关系统进行数据储存，故分为一类。
-受制于 oauth 权限问题，部分 git 系评论系统存在严重的隐私泄露问题，建议查看对应社区 issues 后使用
+受制于 oauth 权限问题，部分 git 系评论系统存在严重的隐私泄露问题，建议查看对应社区 issues 后使用。
 :::details gitalk
 [gitalk](https://github.com/gitalk/gitalk/blob/master/readme-cn.md) 是一个基于 GitHub Issue 和 Preact 开发的评论插件。
 配置内容如下:
@@ -79,16 +78,15 @@ gitalk:
 
 ### waline
 
-> 使用 waline 评论系统 Zeabur 服务端作为部署
-> Zeabur 的控制台国内好像打不开(我没打开),但是生成的 Domains 要比 Vercel 的速度快很多
+> 使用 waline 评论系统 Zeabur 服务端作为部署，Zeabur 的控制台国内好像打不开（我没打开），但是生成的 Domains 要比 Vercel 的速度快很多。
 
 ![云服务器对比](https://github.com/foryouos/shokaX-docs/assets/58133210/882899f3-5050-4b61-ace9-5ea6933a9217 "来源Twikoo文档对各服务器的对比")
 
-- Zeabur 服务端部署，[官方简介](https://waline.js.org/guide/deploy/zeabur.html) 一步一步来，到最后可以通过 Domains 打开评论即可
+- Zeabur 服务端部署，[官方简介](https://waline.js.org/guide/deploy/zeabur.html) 一步一步来，到最后可以通过 Domains 打开评论即可。
 
-  > 部署时间会长一点 5 分钟左右，耐心等待，部署 running 之后，要生成 Domains，并打开 Doamins 测试，成功即可
+  > 部署时间会长一点 5 分钟左右，耐心等待，部署 running 之后，要生成 Domains，并打开 Doamins 测试，成功即可。
 
-- 配置根目录下\_config.shokaX.yml 的评论系统
+- 配置根目录下 \_config.shokaX.yml 的评论系统：
 
 ```yaml
 waline:
@@ -96,7 +94,9 @@ waline:
   serverURL: "https://domains.zeabur.app" # 将此链接换成您自己的Domains,主页链接后面不能加 /  会出错
 ```
 
-- 清理 Hexo cl
-- 重新构建 Hexo g
-- Hexo s 评论就可以使用啦
-  ![image](https://github.com/foryouos/shokaX-docs/assets/58133210/7c2ab393-96f1-4cce-95cc-0017e9981026)
+- 执行 `hexo cl` 清理缓存。
+- 执行 `hexo g` 重新构建。
+- 执行 `hexo s` 启动本地服务器，评论就可以使用啦！
+
+![image](https://github.com/foryouos/shokaX-docs/assets/58133210/7c2ab393-96f1-4cce-95cc-0017e9981026)
+
