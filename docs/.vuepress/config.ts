@@ -1,7 +1,6 @@
 
 import { defineUserConfig} from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import theme from "./theme";
 export default defineUserConfig({
@@ -17,9 +16,6 @@ export default defineUserConfig({
             }
           }
         }),
-        shikiPlugin({
-            theme: "dark-plus"
-        }),
         googleAnalyticsPlugin({
             id: "G-LTTY0HV9Z3"
         })
@@ -28,5 +24,6 @@ export default defineUserConfig({
     title: 'Hexo-theme-ShokaX',
     description: '基于 shoka 的高度可定制现代hexo主题，简洁、高效、易用。',
     head: [['meta',{name: "baidu-site-verification",content: "codeva-8HEN8ONW9G"}]],
-    theme: theme
+    theme: theme,
+    shouldPrefetch: false
 })

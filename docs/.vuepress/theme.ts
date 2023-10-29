@@ -7,8 +7,8 @@ export default hopeTheme({
     footer: "<a href=\"https://beian.miit.gov.cn/\" target=\"_blank\">津ICP备2022001375号</a>",
     sidebar: sidebar,
     navbar: navbar,
+    hostname: "docs.kaitaku.xyz",
     plugins: {
-        prismjs: false,
         mdEnhance: {
             codetabs: true
         },
