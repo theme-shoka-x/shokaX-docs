@@ -2,7 +2,11 @@
 
 ## 在开始之前
 
-在开始之前，你应该已经安装了如下软件:
+### 写在前面
+
+受制于开发组的时间问题，本文档肯定会有诸多不完善之处，为了给用户一个良好的 Blogging 体验，若您已对 Hexo 及 ShokaX 有一定了解且您有协助修改文档的意愿，欢迎您发起 Pull Request。
+
+在开始之前，你应该已经安装了如下软件：
 
 - Node.js 18 以上
 - hexo-cli 的 latest 版本
@@ -34,11 +38,6 @@ SXC install shokaX
 ```
 
 :::
-:::warning
-~~SXC 默认从 npm 安装主题，如果自定义的部分较多可以从 github 安装:~~
-~~`SXC install -r=github shokaX`~~  
-目前 SXC 已不支持从 github 源安装
-:::
 
 ### 手动安装
 
@@ -46,7 +45,7 @@ SXC install shokaX
 ShokaX 不建议使用手动安装，仅应该在 SXC 无法正常安装的时候手动安装
 :::
 
-指令如下:
+指令如下：
 
 ::: code-tabs#shell
 
@@ -83,12 +82,16 @@ pnpm add lozad
 ## 配置主题
 
 :::warning
-更改根目录`_config.yml`中的`theme`为`shokaX`(SXC 默认 origin 或 npm 安装修改为`shokax`) \
-请注意,本主题仅在 npm 上使用的是`shokax`,其他情况下均为`shokaX` \
+更改根目录`/_config.yml`中的`theme`为`shokaX`(SXC 默认 origin 或 npm 安装修改为`shokax`) \
+请注意，本主题仅在 npm 上使用的是`shokax`,其他情况下均为`shokaX` \
 对于 linux 等大小写敏感的系统，npm 源的 theme 必须使用`shokax`同时修改自定义配置文件为`_config.shokax.yml`
 :::
 
-markdown 配置如下:
+:::tip
+ 以下配置均在`/_config.yml`文件中修改
+:::
+
+markdown 配置如下：
 
 ```yaml
 markdown:
@@ -146,8 +149,8 @@ syntax_highlighter: false
 ```
 
 :::warning
-在 0.2.5 及以下的版本中，如果您把 ShokaX 网站部署到了 cloudflare CDN 支持的服务上，请关闭`rocket-loader`，此功能与 ShokaX 的 page ts 存在冲突，会导致页面在 loading 时卡死。 \
-0.2.6 已修复此问题，可开启`rocket-loader`功能。
+在 0.2.5 及以下的版本中，如果您把 ShokaX 网站部署到了 cloudflare CDN 支持的服务上，请关闭 `rocket-loader` ，此功能与 ShokaX 的 page.ts 存在冲突，会导致页面在 loading 时卡死。 \
+0.2.6 已修复此问题，可开启 `rocket-loader` 功能。
 :::
 
 现在 shokaX 已经可以正常运行了，`hexo s` 即可。

@@ -1,5 +1,9 @@
 # 更多配置
 
+:::tip
+ 以下配置均在`/_config.yml`文件中修改
+:::
+
 ## 文件压缩
 
 此功能为 ShokaX 自带 MD 渲染器的一部分，参考自 [hexo-neat](https://github.com/rozbo/hexo-neat)。
@@ -20,7 +24,7 @@ minify:
   js:
     enable: true
     mangle:
-      toplevel: true #如果js压缩错误请删除此行
+      toplevel: true #如果 js 压缩错误请删除此行
     output:
     compress:
       ecma: 2018
@@ -30,10 +34,16 @@ minify:
 
 ## feed 生成
 
+:::tip
+ 以下配置均在`/_config.yml`文件中修改
+:::
+
 此部分对 feed 文件进行配置，生成 `rss`、`atom`、`feed.json` 等文件。
+
 :::tip
 一般情况选择 `npm(SXC) origin` 即可，如果是 github 源安装则需要使用 `github origin`。
 :::
+
 ::: code-tabs#shell
 @tab github
 
@@ -120,4 +130,3 @@ algolia:
 :::warning
 请勿将 `apiKey` 和 `adminApiKey` 混用，否则索引可能被攻击！
 :::
-
