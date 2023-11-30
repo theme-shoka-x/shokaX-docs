@@ -242,6 +242,14 @@ ja:
 - https://i.imgtg.com/2023/03/09/Y0hOs.jpg
 ```
 
+:::warning
+当`_images.yml`中的总图片数量少于6张时，主题将不会使用`_images.yml`作为图片源
+:::
+
+自0.3.7版本开始，ShokaX 允许主页和文章使用不同的图片源：
+- `_images_index.yml`为首页图片源文件，在存在时优先使用
+- `_images.yml`为通用图片源文件，作为首页的后备图片源和文章的图片源
+
 ### 首页精选与分类翻转块
 
 1、修改站点配置，在 Hexo 根目录 `_config.yml` 中找到 `category_map`，配置每个分类对应的英文映射。
