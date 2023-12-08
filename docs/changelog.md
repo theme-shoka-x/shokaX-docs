@@ -1,5 +1,29 @@
 # 更新日志
 
+## 0.3.9
+* fix: links href错误问题 by [@zkz098](https://github.com/zkz098) in [923da30](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/923da30f07a78c7603d5ce6cffdc5bacd8b8bae2)
+* feat: 封面图少于6张时自动填充为6张 by [@zkz098](https://github.com/zkz098) in [99d34b0](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/99d34b02f17b3e5a84f8e5f91e5286597fc6cc65)
+
+**Full Changelog**: [v0.3.8...v0.3.9](https://github.com/theme-shoka-x/hexo-theme-shokaX/compare/v0.3.8...v0.3.9)
+
+## 0.3.8
+
+- fix: 修复 zh-HK 翻译 by [@Xujiayao](https://github.com/Xujiayao) in [#174](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/174)
+- fix: config merge by [@D-Sketon](https://github.com/D-Sketon) in [#176](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/176)
+- refactor: 去除外链nofollow功能 by [@zkz098](https://github.com/zkz098) in [b76ce07](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/b76ce0777e45819660ce3a4343eb0054fdb644bb)
+- feat: index_images优先读取data文件夹中的文件 by [@zkz098](https://github.com/zkz098) in [7a910a5](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/7a910a5ece28b3dd91fad9c995597e8f962d6e0b)
+
+**Full Changelog**: [v0.3.7...v0.3.8](https://github.com/theme-shoka-x/hexo-theme-shokaX/compare/v0.3.7...v0.3.8)
+
+## 0.3.7
+
+- docs: 移除github源 by [@D-Sketon](https://github.com/D-Sketon) in [#160](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/160)
+- fix: pageviewCount 404 by [@D-Sketon](https://github.com/D-Sketon) in [#169](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/169)
+- feat: 允许index和文章使用不同的封面图 by [@zkz098](https://github.com/zkz098) in [beae805](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/beae805d1eb66f728f484ca4e1ffb63d7d25f734)
+- fix: 修复分类页面一级分类显示不正常问题 by [@zkz098](https://github.com/zkz098) and [@AquaOH](https://github.com/AquaOH) in [ca01f61](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/ca01f61088309309a503a62623647a8199dc5558)
+
+**Full Changelog**: [v0.3.6...v0.3.7](https://github.com/theme-shoka-x/hexo-theme-shokaX/compare/v0.3.6...v0.3.7)
+
 ## 0.3.6
 
 :::warning
