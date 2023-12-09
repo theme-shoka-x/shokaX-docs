@@ -82,7 +82,7 @@ pnpm add lozad
 ## 配置主题
 
 :::warning
-更改根目录`/_config.yml`中的`theme`为`shokaX`(SXC 默认 origin 或 npm 安装修改为`shokax`) \
+更改根目录 `/_config.yml` 中的 `theme` 为 `shokaX` (SXC 默认 origin 或 npm 安装修改为 `shokax`) \
 请注意，本主题仅在 npm 上使用的是`shokax`,其他情况下均为`shokaX` \
 对于 linux 等大小写敏感的系统，npm 源的 theme 必须使用`shokax`同时修改自定义配置文件为`_config.shokax.yml`
 :::
