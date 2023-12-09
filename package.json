@@ -16,6 +16,7 @@
     "@vuepress/plugin-docsearch": "2.0.0-rc.0",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.0",
     "algoliasearch": "^4.20.0",
+    "lightningcss": "^1.22.1",
     "sass": "^1.69.5",
     "typescript": "^5.3.3",
     "vue": "^3.3.11",

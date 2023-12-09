@@ -1,7 +1,7 @@
-
 import { defineUserConfig} from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { viteBundler } from 'vuepress'
 import theme from "./theme";
 export default defineUserConfig({
     plugins: [
@@ -25,5 +25,12 @@ export default defineUserConfig({
     description: '基于 shoka 的高度可定制现代hexo主题，简洁、高效、易用。',
     head: [['meta',{name: "baidu-site-verification",content: "codeva-8HEN8ONW9G"}]],
     theme: theme,
-    shouldPrefetch: false
+    shouldPrefetch: false,
+    bundler: viteBundler({
+      viteOptions: {
+        build: {
+          cssMinify: "lightningcss"
+        }
+      }
+    })
 })
