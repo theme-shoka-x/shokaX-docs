@@ -2,13 +2,13 @@
 
 ## 介绍
 
-ShokaX 是基于 Shoka 开发的主题，提供了更高的性能、更多的功能、更现代的代码。
+ShokaX 是基于 Shoka 开发的主题，在 Shoka 的基础上提供了更高的性能、更多的功能以及更现代化的代码。
 
 ## 开发原因
 
 由于 [Shoka](https://github.com/amehime/hexo-theme-shoka) 于 2021 年停止了更新（指 github 库没有新提交），并且社区活动近乎停止（无人回复 issues，Bug 无人修复）。
 
-与此同时，作为一个 Shoka 使用者，我在使用时也发现了一些问题：
+与此同时，开发团队内的某位前 Shoka 用户在使用时也发现了一些问题：
 
 - Shoka 自带渲染器无法处理 ES6+ 代码；
 - Shoka js 代码缺少注释且难以理解；

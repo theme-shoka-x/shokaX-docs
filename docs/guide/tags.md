@@ -1,5 +1,9 @@
 # 文章内嵌标签
 
+:::tip
+以下修改内容放在文章中，如 `/source/_posts/foo.md`
+:::
+
 ## MD 标签
 
 ## Front-matter
@@ -10,19 +14,33 @@
 - `sticky`：当设置为 `true` 时此篇文章置顶，如果置顶多篇文章按照发布时间倒序排列，不分页。
 - `tags`：文章标签。
 - `cover`：文章轮播图（覆盖全局）文章封面。
-- `audio`：文章背景音乐（覆盖全局）当设置为 `false` 时关闭背景音乐。
+- `audio`：文章背景音乐（覆盖全局），当设置为 `false` 时关闭背景音乐。
+
+:::tip
+修改内容应该放在代码围栏（形如 `---` ）中，如：
+
+``` markdown
+---
+title: foo
+tags:
+- bar
+- baz
+audio: false
+---
+
+:::
 
 ```yaml
 title: 文章标题
 date: 文章发布的时间
-comment: false   # 关闭本文章评论
-sticky  : true   # 文章是否置顶
+comment: false   # true/false对应开启/关闭本文章评论
+sticky  : true   # 置顶文章
 tags:
 - 文章标签1
 - 文章标签2
 categories:
     - [计算机科学, Linux]
-cover: 文章顶部和文章介绍图(将覆盖文章主页轮播图)
+cover: cover.png # 文章顶部和文章介绍图（将覆盖文章主页轮播图）
 audio:
   - https://music.163.com/song?id=1387098940
 audio: false
@@ -65,7 +83,7 @@ $$\begin {array}{c}
 
 ```markdown
 ---
-title: quiz(练习题)
+title: quiz（练习题）
 quiz: true
 ---
 ```
@@ -83,7 +101,7 @@ quiz: true
 
 作用如下：
 
-- `1.`：题号，建议使用。
+- `1.`：题号，必须使用。
 - `[]{.gap}`：题目的挖空处，会渲染为横线（可选）。
 - `{.correct}`：题目的正确选项。
 - `{.options}`：选项列表的结束处。
@@ -92,10 +110,10 @@ quiz: true
 
 ```markdown
 1. 以下选项正确的是[]{.gap}。{.quiz}
-    - 这是选项A
-    - 这是选项B
-    - 这是选项C
-    - 这是选项D(正确答案) {.correct}
+    - 这是选项 A
+    - 这是选项 B
+    - 这是选项 C
+    - 这是选项 D（正确答案） {.correct}
 {.options}
 ```
 
@@ -109,15 +127,15 @@ quiz: true
     - 正确选项 {.correct}
     - 正确选项 {.correct}
 {.options}
-    > - 这里是A选项的注解
-    > - 这里是B选项的注解
-    > - 这里是C选项的注解
+    > - 这里是 A 选项的注解
+    > - 这里是 B 选项的注解
+    > - 这里是 C 选项的注解
     > {.options}
 ```
 
 作用如下：
 
-- `1.`：题号，建议使用。
+- `1.`：题号，必须使用。
 - `{.correct}`：题目的正确选项。
 - `{.options}`：选项列表的结束处（使用缩进控制）。
 
@@ -125,41 +143,43 @@ quiz: true
 
 ### links（链接块）
 
+::: tip
 此标签用于以富媒体形式表现某链接，可用于友链、网站分享和功能合集等。
+:::
 
 配置格式如下：
 
 ```yaml
 - site: # 主标题
-  owner: # 站点所有者(选填)
+  owner: # 站点所有者（选填）
   url: # 站点链接
-  desc: # 站点描述(选填)
-  image: # 站点图像(选填)
-  color: # 站点颜色(选填)
+  desc: # 站点描述（选填）
+  image: # 站点图像（选填）
+  color: # 站点颜色（选填）
 ```
 
 - `color`：需要使用双引号包裹，值为大写的 16 进制颜色代码。
 
-在文章中使用:
+在文章中使用：
 ::: code-tabs#shell
 @tab 文章内嵌
 
 ```text
 {% links %}
 - site: # 主标题
-  owner: # 站点所有者(选填)
+  owner: # 站点所有者（选填）
   url: # 站点链接
-  desc: # 站点描述(选填)
-  image: # 站点图像(选填)
-  color: # 站点颜色(选填)
-# 多链接参考yaml列表格式
+  desc: # 站点描述（选填）
+  image: # 站点图像（选填）
+  color: # 站点颜色（选填）
+# 多链接参考 yaml 列表格式
 {% endlinks %}
 ```
 
 @tab 外部文件
 
 ```text
-# path为一个yaml文件
+# path 为一个 yaml 文件
 {% linksfile [path] %}
 ```
 
@@ -167,12 +187,11 @@ quiz: true
 
 ```yaml
 - site: # 主标题
-  owner: # 站点所有者(选填)
+  owner: # 站点所有者（选填）
   url: # 站点链接
-  desc: # 站点描述(选填)
-  image: # 站点图像(选填)
-  color: # 站点颜色(选填)
+  desc: # 站点描述（选填）
+  image: # 站点图像（选填）
+  color: # 站点颜色（选填）
 ```
 
 :::
-
