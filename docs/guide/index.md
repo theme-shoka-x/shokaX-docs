@@ -142,7 +142,7 @@ prismjs:
   enable: false
 ```
 
-停用默认代码高亮（>=`7.0.0-rc1`）:
+停用默认代码高亮（>=`7.0.0-rc1`）：
 
 ```yaml
 syntax_highlighter: false

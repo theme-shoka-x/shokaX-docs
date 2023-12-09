@@ -1,5 +1,5 @@
 # 更新日志
-
+ 
 ## 0.3.9
 * fix: links href错误问题 by [@zkz098](https://github.com/zkz098) in [923da30](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/923da30f07a78c7603d5ce6cffdc5bacd8b8bae2)
 * feat: 封面图少于6张时自动填充为6张 by [@zkz098](https://github.com/zkz098) in [99d34b0](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/99d34b02f17b3e5a84f8e5f91e5286597fc6cc65)

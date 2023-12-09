@@ -1,7 +1,7 @@
 # 主题配置
 
 ::: tip
-除非特殊说明，以下配置均在 `/_config.shokax.yml` 或 `/_config.shokaX.yml` 文件中修改
+ 除非特殊说明，以下配置均在 `/_config.shokax.yml` 或 `/_config.shokaX.yml` 文件中修改
 :::
 
 ## 基础配置
