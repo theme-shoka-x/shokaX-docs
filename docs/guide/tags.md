@@ -25,9 +25,8 @@ title: foo
 tags:
 - bar
 - baz
----
 audio: false
-```
+---
 
 :::
 
