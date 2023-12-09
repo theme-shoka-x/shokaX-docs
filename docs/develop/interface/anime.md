@@ -160,14 +160,19 @@ anime()
 
 - `targets: any`: (可选)动画对象，含多个可选类型:
   - DOM 对象
+
     ```typescript
     targets: document.getElementById("imgs");
     ```
+
   - 简单对象
+
     ```typescript
     targets: { x: 1, y: 2 }
     ```
+
   - 数组
+
     ```typescript
     targets: [
       { x: 1, y: 2 },
@@ -175,15 +180,20 @@ anime()
       { x: 3, y: 4 },
     ];
     ```
+
 - `duration: number`: (可选)动画持续时间，单位毫秒
   - 常规动画
+
     ```typescript
     duration: 1000;
     ```
+
   - 无限动画
+
     ```typescript
     duration: Infinity;
     ```
+
 - `easing: string`: (可选)动画类型，参见下文[EasingTypes](#easingtypes)
 - `delay: number`: (可选)动画延迟时间，单位毫秒
 - `begin: (targets: any) => void`: (可选)开始回调，在动画开始之前被调用
@@ -191,10 +201,13 @@ anime()
 - `complete: (targets: any) => void`: (可选)结束回调，在动画结束之后被调用
 - `[index:string]:any`: (可选)动画对象中需要变化的属性及其终态值，含多个可选类型:
   - 基础类型，仅包含终态值
+
     ```typescript
     lineWidth: 0;
     ```
+
   - 对象类型，可以对单个属性做更多配置
+
     ```typescript
     alpha: {
         value: 0,   // 终态值，必填
@@ -202,22 +215,30 @@ anime()
         duration: anime.random(600, 800)    // 持续时间，必填
     }
     ```
+
   - 数组类型，含初态和终态两个值
+
     ```typescript
     x: [10, 20];
     ```
+
   - 关键帧模式，可以做到更细力度的控制
+
     ```typescript
     x: [
       { value: 10, duration: 200 },
       { value: 20, duration: 400 },
     ];
     ```
+
   - 函数类型
+
     ```typescript
     y: (item) => item.x;
     ```
+
   - 支持 px 和百分比
+
     ```typescript
     x: '100%',
     y: '20px',
