@@ -32,9 +32,9 @@ js: "js" # js 存放目录 (不建议改动)
 
 - 不同的文件名称分别代表对应的图片。
   - `avatar.jpg` 默认情况下对应主页上的个人头像，可修改
-  - `favicon.ico` 网站标题左边呈现的头像 logo
-  - `apple-touch-icon.png` 网站图标
-  - `failure.ico` 网站隐藏窗口呈现的图标
+  - `favicon.ico` 网站图标
+  - `apple-touch-icon.png` 将网页链接添加到主屏幕时的图标
+  - `failure.ico` 网站被隐藏时的网站图标
   - `alipay.png` 支付宝捐赠付款码
   - `wechatpay.png` 微信捐赠收款码
   - `paypal.png` PayPal 捐赠收款码
