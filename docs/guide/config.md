@@ -35,7 +35,7 @@ minify:
 ## feed 生成
 
 :::tip
- 以下配置均在`/_config.yml`文件中修改
+ 以下配置均在 `/_config.yml` 文件中修改
 :::
 
 此部分对 feed 文件进行配置，生成 `rss`、`atom`、`feed.json` 等文件。
