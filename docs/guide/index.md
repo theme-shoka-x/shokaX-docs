@@ -88,7 +88,7 @@ pnpm add lozad
 :::
 
 :::tip
- 以下配置均在`/_config.yml`文件中修改
+ 以下配置均在 `/_config.yml` 文件中修改
 :::
 
 markdown 配置如下：
