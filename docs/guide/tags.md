@@ -1,7 +1,7 @@
 # 文章内嵌标签
 
 :::tip
-以下修改内容放在文章中，如`/source/_posts/foo.md`
+以下修改内容放在文章中，如 `/source/_posts/foo.md`
 :::
 
 ## MD 标签
