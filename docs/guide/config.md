@@ -5,32 +5,46 @@
 :::
 
 ## 文件压缩
+:::warning
+如果您正在使用 0.1.8 或更低版本的 MD 渲染器，那么文件压缩不适用
+:::
 
-此功能为 ShokaX 自带 MD 渲染器的一部分，参考自 [hexo-neat](https://github.com/rozbo/hexo-neat)。
-css 使用 css-clean 压缩，js 使用 terser 压缩，可参考对应 API 进行配置
+建议使用 [hexo-lightning-minify](https://github.com/theme-shoka-x/hexo-lightning-minify)，由 ShokaX 开发，安装方式：
+```shell
+pnpm add hexo-lightning-minify
+```
+:::tip
+使用 SXC core 0.3+（预计2024年1月发布）时此插件会和markdown渲染核心捆绑安装
+:::
 
+配置如下：
 ```yaml
 minify:
-  html:
-    enable: true
-    exclude: # 排除 hexo-feed 用到的模板文件
-      - "**/json.ejs"
-      - "**/atom.ejs"
-      - "**/rss.ejs"
-  css:
-    enable: true
-    exclude:
-      - "**/*.min.css"
   js:
-    enable: true
-    mangle:
-      toplevel: true #如果 js 压缩错误请删除此行
-    output:
-    compress:
-      ecma: 2018
+    enable: true # ShokaX 自带 esbuild 优化，不建议开启，其他主题建议开启
+    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式
+  css:
+    enable: true # 开启 CSS 优化
+    options:
+      targets: ">= 0.5%" # browserslist 格式的 target
+    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式
+  html:
+    enable: true # 开启 HTML 优化
+    options:
+      comments: false # 是否保留注释内容
+    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式
+  image:
+    enable: true # 开启图片预处理和自动 WebP 化
+    options:
+      avif: false
+      webp: true # 预留配置项，现版本无作用
+      quality: 80 # 质量，支持1-100的整数、lossless或nearLossless
+      effort: 2 # CPU 工作量，0-6之间的整数(越低越快)
+      replaceSrc: true # 自动替换生成html中的本地图片链接为webp链接
+      # 我们更建议使用 Service Worker 来在用户侧实现 replaceSrc 的功能，这将能够以一种侵入式更小的方式实现链接替换
     exclude:
-      - "**/*.min.js"
 ```
+自动 WebP 化功能在初次`hexo g`或`hexo cl`后不可用，需要再运行一次`hexo g`
 
 ## feed 生成
 
