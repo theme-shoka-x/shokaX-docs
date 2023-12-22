@@ -4,6 +4,7 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { viteBundler } from 'vuepress'
 import theme from "./theme";
 export default defineUserConfig({
+
     plugins: [
         docsearchPlugin({
           apiKey: 'c30c4d59605d21483f6b76cdde63ce96',
@@ -32,5 +33,17 @@ export default defineUserConfig({
           cssMinify: "lightningcss"
         }
       }
-    })
+    }),
+    locales: {
+      '/': {
+        lang: "zh-CN",
+        title: "Hexo-theme-ShokaX",
+        description: '基于 shoka 的高度可定制现代hexo主题，简洁、高效、易用。'
+      },
+      '/en/': {
+        lang: "en-US",
+        title: "Hexo-theme-ShokaX",
+        description: 'Shoka-based highly customizable modern Hexo theme that is clean, efficient, and easy to use.'
+      }
+    }
 })

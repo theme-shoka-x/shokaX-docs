@@ -5,19 +5,23 @@
 :::
 
 ## 文件压缩
+
 :::warning
 如果您正在使用 0.1.8 或更低版本的 MD 渲染器，那么文件压缩不适用
 :::
 
 建议使用 [hexo-lightning-minify](https://github.com/theme-shoka-x/hexo-lightning-minify)，由 ShokaX 开发，安装方式：
+
 ```shell
 pnpm add hexo-lightning-minify
 ```
+
 :::tip
 使用 SXC core 0.3+（预计2024年1月发布）时此插件会和markdown渲染核心捆绑安装
 :::
 
 配置如下：
+
 ```yaml
 minify:
   js:
@@ -44,6 +48,7 @@ minify:
       # 我们更建议使用 Service Worker 来在用户侧实现 replaceSrc 的功能，这将能够以一种侵入式更小的方式实现链接替换
     exclude:
 ```
+
 自动 WebP 化功能在初次`hexo g`或`hexo cl`后不可用，需要再运行一次`hexo g`
 
 ## feed 生成
