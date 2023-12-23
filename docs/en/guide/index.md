@@ -1,10 +1,10 @@
-# 快速上手
+# Get Start
 
-## 在开始之前
+## Before starting
 
-### 写在前面
+Due to the time constraints of the development team, there are definitely many imperfections in the document. In order to give users a good Blogging experience, if you already know a bit of Hexo and ShokaX and you are offered to help in modifying the docs, welcome launching a Pull Request.
 
-Due to the time constraints of the development team, there are definitely many imperfections in this document. In order to give users a good Blogging experience, if you already know a bit of Hexo and ShokaX and you are offered to help in modifying the docs, welcome launching a Pull Request.
+Due to the translators' ability, there are definitely many imperfections in the translation of the document. If you find any translation errors in the document, welcome launching a Pull Request.
 
 在开始之前，你应该已经安装了如下软件：
 
