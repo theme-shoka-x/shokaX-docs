@@ -6,10 +6,10 @@ tagline: Highly customizable Hexo theme that sets your blog apart
 actions:
   - type: primary
     text: Quick Start
-    link: /guide/
+    link: /en/guide/
   - type: secondary
     text: Custom Development
-    link: /develop/basic/
+    link: /en/develop/basic/
 
 features:
   - title: Easy to Use
