@@ -12,7 +12,7 @@ export default hopeTheme({
         },
         '/en/': {
             navbar: navbarEn,
-            sidebar: sidebarEn
+            sidebar: sidebarEn,
         }
     },
     displayFooter: true,

@@ -85,9 +85,9 @@ Creates an HTML element and places it.
 - `tag: string`: Tag name of the HTML element to create ('div', 'span', etc.)
 - `obj: Object`: Contains attributes and values to apply to the newly created HTML element
 - `position?: string`: (Optional) Represents where the newly created HTML element is placed. Options:
-    - `after`: Insert the new element after `this`
-    - `replace`: Clear the content of `this` and add the newly created element as the only child within `this`
-    - Otherwise: Default to adding the element as the last child of `this`
+  - `after`: Insert the new element after `this`
+  - `replace`: Clear the content of `this` and add the newly created element as the only child within `this`
+  - Otherwise: Default to adding the element as the last child of `this`
 
 #### Return Type
 
@@ -178,16 +178,16 @@ Manipulate attributes of `this`.
 
 - `type: string`: Attribute name to manipulate
 - `value: string`: (Optional) Attribute value. Options:
-    - `null`: Remove the attribute with the given `type`
-    - Exists (neither `null` nor `undefined`): Set the attribute with `type` name to `value`
-    - `undefined` or omitted: Return the value of the attribute with `type` name
+  - `null`: Remove the attribute with the given `type`
+  - Exists (neither `null` nor `undefined`): Set the attribute with `type` name to `value`
+  - `undefined` or omitted: Return the value of the attribute with `type` name
 
 #### Return Type
 
 - `void | EventTarget | string`: Varies based on the value of `value`:
-    - `void`: `value` is `null`
-    - `EventTarget`: `value` exists (neither `null` nor `undefined`), returns `this` (itself)
-    - `string`: `value` is `undefined` or omitted, returns the value of the attribute with `type` name
+  - `void`: `value` is `null`
+  - `EventTarget`: `value` exists (neither `null` nor `undefined`), returns `this` (itself)
+  - `string`: `value` is `undefined` or omitted, returns the value of the attribute with `type` name
 
 #### Example (Excerpt from ShokaX page ts)
 
@@ -227,8 +227,8 @@ Set/get the `display
 #### Return Type
 
 - `string | EventTarget`: Varies based on `d`:
-    - `string`: If `d` is omitted, returns the `display` property of `this`
-    - `EventTarget`: If `d` is provided, returns `this` (itself)
+  - `string`: If `d` is omitted, returns the `display` property of `this`
+  - `EventTarget`: If `d` is provided, returns `this` (itself)
 
 #### Example (Excerpt from ShokaX page ts)
 
@@ -273,10 +273,10 @@ Manipulate class names. Generally not directly used.
 #### Parameters
 
 - `type: string`: Type of class name operation. Options:
-    - `add`
-    - `remove`
-    - `toggle`
-    - `replace`
+  - `add`
+  - `remove`
+  - `toggle`
+  - `replace`
 - `className: string`: Class name or list of class names to operate on
 - `display: boolean`: (Optional) For `toggle` operations, whether to add or remove the class name
 

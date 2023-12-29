@@ -159,19 +159,19 @@ anime()
 ### AnimeOptions
 
 - `targets: any`: (Optional) Animated object containing multiple optional types:
-    - DOM Object
+  - DOM Object
 
       ```typescript
       targets: document.getElementById("imgs");
       ```
 
-    - Simple Object
+  - Simple Object
 
       ```typescript
       targets: { x: 1, y: 2 }
       ```
 
-    - Array
+  - Array
 
       ```typescript
       targets: [
@@ -182,13 +182,13 @@ anime()
       ```
 
 - `duration: number`: (Optional) Duration of the animation in milliseconds
-    - Regular animation
+  - Regular animation
 
       ```typescript
       duration: 1000;
       ```
 
-    - Infinite animation
+  - Infinite animation
 
       ```typescript
       duration: Infinity;
@@ -200,13 +200,13 @@ anime()
 - `update: (targets: any) => void`: (Optional) Update callback called after each update
 - `complete: (targets: any) => void`: (Optional) Complete callback called after the animation finishes
 - `[index:string]:any`: (Optional) Properties to be animated and their final values in the animated object, containing multiple optional types:
-    - Basic type with only a final value
+  - Basic type with only a final value
 
       ```typescript
       lineWidth: 0;
       ```
 
-    - Object type allowing further configuration for a single property
+  - Object type allowing further configuration for a single property
 
       ```typescript
       alpha: {
@@ -216,13 +216,13 @@ anime()
       }
       ```
 
-    - Array type with initial and final values
+  - Array type with initial and final values
 
       ```typescript
       x: [10, 20];
       ```
 
-    - Keyframes allowing finer control
+  - Keyframes allowing finer control
 
       ```typescript
       x: [
@@ -231,13 +231,13 @@ anime()
       ];
       ```
 
-    - Function type
+  - Function type
 
       ```typescript
       y: (item) => item.x;
       ```
 
-    - Supports px and percentages
+  - Supports px and percentages
 
       ```typescript
       x: '100%',
