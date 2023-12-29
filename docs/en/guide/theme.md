@@ -271,14 +271,11 @@ ja:
 - https://i.imgtg.com/2023/03/09/Y0hOs.jpg
 ```
 
-:::warning
-当`_images.yml`中的总图片数量少于6张时，主题将不会使用`_images.yml`作为图片源
-:::
-
 自0.3.7版本开始，ShokaX 允许主页和文章使用不同的图片源：
+以下文件中以`_`开头的为主题文件夹下，其他均为`source/_data`目录下：
 
-- `_images_index.yml`为首页图片源文件，在存在时优先使用
-- `_images.yml`为通用图片源文件，作为首页的后备图片源和文章的图片源
+- `images_index.yml`为首页图片源文件，如果主题文件夹下存在`_images_index.yml`，则会使用主题文件夹下的文件，否则使用`source/_data/images_index.yml`
+- `images.yml`为通用图片源文件，作为首页的后备图片源和文章的图片源。如果未找到`images.yml`，则会使用主题文件夹下的`_images.yml`
 
 ### 首页精选与分类翻转块
 

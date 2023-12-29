@@ -1,16 +1,17 @@
-# 评论系统
+# Comment System
 
 ::: tip
- 除非特殊说明，以下配置均在 `/_config.shokax.yml` 或 `/_config.shokaX.yml` 文件中修改
+    Unless otherwise specified, the following configurations are modified in the `/_config.shokax.yml` or `/_config.shokaX.yml` files.
 :::
 
-## 前言
+## Preface
 
-如果你从 shoka 迁移，请注意 shokaX 已经删除了对于 `minivaline` 的支持，因为 `minivaline` 储存库已存档（停止维护），建议使用 `waline` 代替。ShokaX 不会对 `valine` 提供支持，因为 `valine` 评论系统存在严重的安全问题，且 `1.4.0` 后 valine 不再开源。
+If you are migrating from shoka, please note that shokaX has removed support for `minivaline` as the `minivaline` repository has been archived (ceased maintenance). It is recommended to use `waline` instead. ShokaX will not provide support for `valine` due to serious security issues with the `valine` comment system, and because `valine` is no longer open-source after version 1.4.0.
 
-## valine 系评论系统
+## valine-liked Comment System
 
-以下是在解决 valine 遗留问题同一时期产生的评论系统故归为一类，然在其社区 issue 中也报告了类似的攻击事件，故请谨慎选择。
+These are some systems that fixed some issues of valine, but some attack events are reported in those systems' community issue, so choose those systems carefully
+
 ::: details waline
 [waline](https://waline.js.org/) 一款简洁、安全的评论系统。
 配置内容如下：
