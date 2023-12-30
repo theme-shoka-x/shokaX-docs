@@ -143,8 +143,6 @@ post:
   count: true # Enable
 ```
 
-![Article Word Count Stats](./word-count-stats.png "Article Word Count Stats")
-
 ## Preloading, Address Resolution Settings
 
 ```yaml
@@ -291,8 +289,6 @@ Files starting with `_` are theme folder-specific, while others are in the `sour
    categories:
      - [计算机科学, C++, 郑莉老师C++语言程序设计]
    ```
-
-   ![Layout as shown](./directory-setup.png "Layout as shown")
 
 3. As shown in the image above, at the bottom of the file directory, include a `cover.jpg` file, which will serve as the image for the featured homepage. This will enable the "Featured Articles" and "Mouse Hover Flip" functionalities.
 
