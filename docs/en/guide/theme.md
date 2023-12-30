@@ -158,6 +158,7 @@ performance:
 
 :::details Should I use preConnect or dnsPrefetch?
 The `preConnect` option pre-connects to links, significantly accelerating the loading speed of CDN files/comment systems, but using too many can impact initial page performance.
+:::
 
 `dnsPrefetch` is for cases where "pre-connect" isn't worth it; this mode only optimizes DNS resolution, suitable for some non-critical external links (e.g., ads and external videos).
 
