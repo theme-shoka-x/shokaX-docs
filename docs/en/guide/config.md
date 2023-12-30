@@ -1,70 +1,70 @@
-# 更多配置
+# More Configuration
 
 :::tip
- 以下配置均在 `/_config.yml` 文件中修改
+All configurations below are modified in the `/_config.yml` file.
 :::
 
-## 文件压缩
+## File Compression
 
 :::warning
-如果您正在使用 0.1.8 或更低版本的 MD 渲染器，那么文件压缩不适用
+If you're using MD renderer version 0.1.8 or lower, file compression won't apply.
 :::
 
-建议使用 [hexo-lightning-minify](https://github.com/theme-shoka-x/hexo-lightning-minify)，由 ShokaX 开发，安装方式：
+It's recommended to use [hexo-lightning-minify](https://github.com/theme-shoka-x/hexo-lightning-minify), developed by ShokaX. Installation method:
 
 ```shell
 pnpm add hexo-lightning-minify
 ```
 
 :::tip
-使用 SXC core 0.3+（预计2024年1月发布）时此插件会和markdown渲染核心捆绑安装
+When using SXC core 0.3+ (expected release in January 2024), this plugin will be bundled with the markdown rendering core.
 :::
 
-配置如下：
+Configure as follows:
 
 ```yaml
 minify:
   js:
-    enable: true # ShokaX 自带 esbuild 优化，不建议开启，其他主题建议开启
-    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式
+    enable: true # ShokaX comes with esbuild optimization; not recommended to enable, suggested for other themes
+    exclude: # Exclude files, accept string[], should match micromatch format
   css:
-    enable: true # 开启 CSS 优化
+    enable: true # Enable CSS optimization
     options:
-      targets: ">= 0.5%" # browserslist 格式的 target
-    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式
+      targets: ">= 0.5%" # browserslist formatted target
+    exclude: # Exclude files, accept string[], should match micromatch format
   html:
-    enable: true # 开启 HTML 优化
+    enable: true # Enable HTML optimization
     options:
-      comments: false # 是否保留注释内容
-    exclude: # 排除文件，接受 string[]，需符合 micromatch 格式
+      comments: false # Preserve comment content or not
+    exclude: # Exclude files, accept string[], should match micromatch format
   image:
-    enable: true # 开启图片预处理和自动 WebP 化
+    enable: true # Enable image preprocessing and automatic WebP conversion
     options:
       avif: false
-      webp: true # 预留配置项，现版本无作用
-      quality: 80 # 质量，支持1-100的整数、lossless或nearLossless
-      effort: 2 # CPU 工作量，0-6之间的整数(越低越快)
-      replaceSrc: true # 自动替换生成html中的本地图片链接为webp链接
-      # 我们更建议使用 Service Worker 来在用户侧实现 replaceSrc 的功能，这将能够以一种侵入式更小的方式实现链接替换
+      webp: true # Reserved configuration, currently ineffective
+      quality: 80 # Quality, supports integers 1-100, lossless, or nearLossless
+      effort: 2 # CPU effort, integer between 0 and 6 (lower is faster)
+      replaceSrc: true # Automatically replace local image links with webp links in generated html
+      # We highly recommend using Service Worker to implement replaceSrc on the user side; this will allow link replacement in a less intrusive manner
     exclude:
 ```
 
-自动 WebP 化功能在初次`hexo g`或`hexo cl`后不可用，需要再运行一次`hexo g`
+The automatic WebP conversion feature is not available after the initial `hexo g` or `hexo cl`; it needs another `hexo g` to be run.
 
-## feed 生成
+## Generating Feeds
 
 :::tip
- 以下配置均在 `/_config.yml` 文件中修改
+All configurations below are modified in the `/_config.yml` file.
 :::
 
-此部分对 feed 文件进行配置，生成 `rss`、`atom`、`feed.json` 等文件。
+This section configures feed files, generating `rss`, `atom`, `feed.json`, etc.
 
 :::tip
-一般情况选择 `npm(SXC) origin` 即可，如果是 github 源安装则需要使用 `github origin`。
+Usually, choosing `npm(SXC) origin` suffices; if it's a GitHub source installation, use `github origin`.
 :::
 
 ::: code-tabs#shell
-@tab github
+@tab GitHub
 
 ```yaml
 feed:
@@ -110,9 +110,9 @@ feed:
 
 :::
 
-## algolia 搜索
+## Algolia Search
 
-此部分为站内搜索配置。
+This section configures site-wide search.
 
 ```yaml
 algolia:
@@ -122,30 +122,30 @@ algolia:
   chunkSize: 5000
   indexName: #"shokaX"
   fields:
-    - title #必须配置
-    - path #必须配置
-    - categories #推荐配置
+    - title #Required
+    - path #Required
+    - categories #Recommended
     - content:strip:truncate,0,2000
     - gallery
     - photos
     - tags
 ```
 
-### 配置流程
+### Configuration Process
 
-- 登录 [Algolia](https://www.algolia.com/) 官网，建议使用 Github/Google 账号注册/登录。
-- 进入 `Dashboard` - `Search` - `Index` 页面，选择上方 `+ Create Index` 创建索引，索引名称建议为 `shokaX`。
-- 进入 `Dashboard` - `Settings` - `API Keys` 页面，复制如下数据到上方配置中。
+- Log in to the [Algolia](https://www.algolia.com/) website, preferably using a GitHub/Google account for registration/login.
+- Go to `Dashboard` - `Search` - `Index` page, select `+ Create Index` to create an index. It's suggested to name it `shokaX`.
+- Go to `Dashboard` - `Settings` - `API Keys` page, copy the data below into the respective configurations above.
 
-| 页面数据              | 对应配置      |
-| :-------------------- | :------------ |
-| `Application ID`      | `appId`       |
-| `Search-Only API Key` | `apiKey`      |
-| `Admin API Key`       | `adminApiKey` |
-| 创建的索引名          | `indexName`   |
+| Page Data             | Corresponding Configuration |
+| :---------------------| :-------------------------- |
+| `Application ID`      | `appId`                     |
+| `Search-Only API Key` | `apiKey`                    |
+| `Admin API Key`       | `adminApiKey`               |
+| Created Index Name    | `indexName`                 |
 
-- 在博客部署前运行 `hexo algolia` 上传索引，可在 `Dashboard` - `Search` - `Index` 页面中查看。
+- Run `hexo algolia` before deploying the blog to upload the index, viewable on the `Dashboard` - `Search` - `Index` page.
 
 :::warning
-请勿将 `apiKey` 和 `adminApiKey` 混用，否则索引可能被攻击！
+Do not mix up `apiKey` and `adminApiKey`, as it might expose your index to attacks!
 :::

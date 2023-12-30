@@ -1,48 +1,48 @@
-# 主题配置
+# Theme Configuration
 
 ::: tip
- 除非特殊说明，以下配置均在 `/_config.shokax.yml` 或 `/_config.shokaX.yml` 文件中修改
+Unless specified otherwise, the configurations below are modified in either `/_config.shokax.yml` or `/_config.shokaX.yml` files.
 :::
 
-## 基础配置
+## Basic Configuration
 
-### 静态资源
+### Static Resources
 
 ```yaml
-statics: "/" # 静态文件根目录，可用于 CDN 加速
-assets: "assets" # 图片资源存放目录
-css: "css" # css 存放目录 (不建议改动)
-js: "js" # js 存放目录 (不建议改动)
+statics: "/" # Root directory for static files, can be used for CDN acceleration
+assets: "assets" # Directory for image resources
+css: "css" # Directory for CSS (not recommended to change)
+js: "js" # Directory for JavaScript (not recommended to change)
 ```
 
-#### 自定义网站图片
+#### Custom Website Images
 
 ::: tip
-以下文件的修改均在 `/source/_data/` 中预设的素材文件夹中进行，如 `/source/_data/assets`
-:::details 详细步骤
+Modifications for the following files are made within the preset material folder in `/source/_data/`, such as `/source/_data/assets`
+:::details Detailed Steps
 
-- 在 Hexo 的根目录 `/source` 文件夹下；
-- 进入 `/_data` 目录（如果没有则创建）；
-- 根据 `/_config.shokax.yml` 或 `/_config.shokaX.yml` 中自定义的图片目录（如 `assets` ），在  `_data` 目录下创建对应的目录。
-:::
+- Within the Hexo root directory `/source` folder;
+- Navigate to the `/_data` directory (create if absent);
+- Based on the custom image directory specified in `/_config.shokax.yml` or `/_config.shokaX.yml` (e.g., `assets`), create the corresponding directory within the `_data` folder.
+  :::
 
 :::warning
-现**仅支持**`*.jpg`，`*.png`，`*.ico`的**静态文件**解析
+Currently **supports** static file parsing for `*.jpg`, `*.png`, `*.ico` files only.
 :::
 
-- 不同的文件名称分别代表对应的图片。
-  - `avatar.jpg` 默认情况下对应主页上的个人头像，可修改
-  - `favicon.ico` 网站图标
-  - `apple-touch-icon.png` 将网页链接添加到主屏幕时的图标
-  - `failure.ico` 网站被隐藏时的网站图标
-  - `alipay.png` 支付宝捐赠付款码
-  - `wechatpay.png` 微信捐赠收款码
-  - `paypal.png` PayPal 捐赠收款码
-  - `search.png` 搜索下显示的图片
+- Different file names correspond to respective images.
+  - `avatar.jpg` typically corresponds to the personal avatar on the homepage, editable
+  - `favicon.ico` website icon
+  - `apple-touch-icon.png` icon when adding the webpage link to the home screen
+  - `failure.ico` website icon when hidden
+  - `alipay.png` Alipay donation QR code
+  - `wechatpay.png` WeChat donation QR code
+  - `paypal.png` PayPal donation QR code
+  - `search.png` image displayed under search
 
-## 导航栏、社交链接、侧边栏、大标题
+## Navbar, Social Links, Sidebar, Big Title
 
-### 导航栏
+### Navbar
 
 ```yaml
 menu:
@@ -53,18 +53,18 @@ menu:
   link2: /page2/ || coffee
 ```
 
-此处的配置分为如下两种：
+The configuration here consists of:
 
-1. 独立导航链接（例如 `home` 和 `link2`）
-   - `home(link2)` 为本地化键（详见本地化）和备用名称；
-   - `/(/page2/)` 为超链接地址，可为站外链接（需要带 `https`）；
-   - `||` 分隔符，分隔链接和图标；
-   - `home(user)` 图标，具体可参见 `/source/css/_iconfont.styl`。
-2. 下拉菜单（例如 `submenu`）
-   - `default` 为 dropbox 显示的内容，不建议在此处放置超链接地址（建议设置为 `/`）；
-   - 剩余部分为 n 个不重复的独立导航链接。
+1. Independent navigation links (e.g., `home` and `link2`)
+    - `home (link2)` as the localized key (see localization) and alternative name;
+    - `/ (/page2/)` as the hyperlink address, can be an external link (must include `https`);
+    - `||` separator, separating the link and icon;
+    - `home (user)` icon, detailed in `/source/css/_iconfont.styl`.
+2. Dropdown menu (e.g., `submenu`)
+    - `default` is the content displayed in the dropdown box, not recommended to place hyperlink addresses here (suggested to set as `/`);
+    - The remaining part consists of n unique independent navigation links.
 
-### 社交链接
+### Social Links
 
 ```yaml
 social:
@@ -84,86 +84,86 @@ social:
   # douban: https://www.douban.com/people/yourname/ || douban
 ```
 
-启用对应社交链接，只需要解除对应行注释即可。**v0.3.8 之前需要保留至少一个链接**。
+To enable the corresponding social links, simply uncomment the respective line. **For versions prior to v0.3.8, at least one link must be retained**.
 
-格式：
+Format:
 
 ```yaml
 social:
   keyname: link || logo || "color"
 ```
 
-- `keyname`：合法且不重复的 yaml 键；
-- `link`：社交网站链接；
-- `logo`：社交网站 logo；
-- `color`：社交网站 logo 颜色，选填（不填为字体颜色）；
+- `keyname`: Valid and unique YAML key;
+- `link`: Social media link;
+- `logo`: Social media logo;
+- `color`: Social media logo color, optional (if not filled, uses font color);
 
-### 侧边栏
+### Sidebar
 
 ::: tip
-可以选择左侧或右侧（`position: right`或`position: left`）。
-头像文件可在静态文件目录 `/source/_data/assets` 中修改，如`/source/_data/assets/avatar.jpg`。
+You can choose left or right (`position: right` or `position: left`).
+The avatar file can be modified in the static file directory `/source/_data/assets`, like `/source/_data/assets/avatar.jpg`.
 :::
 
 ```yaml
 sidebar:
-  position: right # left/right分别对应左侧/右侧
+  position: right # left/right corresponds to left/right
   avatar: avatar.jpg
 ```
 
-### 大标题
+### Big Title
 
 ```yaml
-alternate: "foo" #站点大标题，（比 title 高一级，但仅在 index 显示）
+alternate: "foo" # Site's big title (higher level than title, only displayed on index)
 ```
 
-## 页脚设置
+## Footer Settings
 
-### 底部设置
+### Bottom Settings
 
 ::: tip
-开启后在页面底部显示随机文章和最近评论。
+Enabling this displays random articles and recent comments at the bottom of the page.
 :::
 
 ```yaml
 widgets:
-  random_posts: true # 随机文章
-  recent_comments: true # 显示最近评论
+  random_posts: true # Random articles
+  recent_comments: true # Display recent comments
 ```
 
-### 字数和阅读时间统计
+### Word Count and Reading Time Stats
 
 ```yaml
-# 页尾全站统计
+# Site-wide stats in footer
 footer:
-  since: 2010 # 开始时间
-  count: true # 开启
-# 文章界面统计
+  since: 2010 # Start year
+  count: true # Enable
+# Post-specific stats
 post:
-  count: true # 开启
+  count: true # Enable
 ```
 
-![文章字数统计](./字数文章统计.png "文章字数统计")
+![Article Word Count Stats](./word-count-stats.png "Article Word Count Stats")
 
-## 预加载、解析地址设置
+## Preloading, Address Resolution Settings
 
 ```yaml
 performance:
-  # 使用 preconnect 预加载的地址 (不建议超过三个)
+  # Addresses preloaded using preconnect (not recommended to exceed three)
   preConnect:
     - "https://lf9-cdn-tos.bytecdntp.com"
-  # 使用 dns-prefetch 预解析的地址
+  # Addresses pre-resolved using dns-prefetch
   dnsPrefetch:
     - "https://cdn.jsdelivr.net"
     - "https://unpkg.com"
 ```
 
-:::details 我该使用 preConnect 还是 dnsPrefetch？
-`preConnect` 选项会对链接进行预连接，这会极大加速 CDN 文件/评论系统的加载速度，但使用过多会影响首屏性能。
+:::details Should I use preConnect or dnsPrefetch?
+The `preConnect` option pre-connects to links, significantly accelerating the loading speed of CDN files/comment systems, but using too many can impact initial page performance.
 
-`dnsPrefetch` 适用于“不值得使用 `pre-connect`”的，此模式仅会优化 DNS 解析，适用于部分非关键站外链接（例如广告和站外视频）。
+`dnsPrefetch` is for cases where "pre-connect" isn't worth it; this mode only optimizes DNS resolution, suitable for some non-critical external links (e.g., ads and external videos).
 
-## SEO 优化和访客优化
+## SEO Optimization and Visitor Enhancement
 
 ```yaml
 seo:
@@ -178,46 +178,48 @@ visitor:
   googleAnalytics: false
 ```
 
-SEO 只需要在对应搜索引擎后填入验证码即可（域名验证 -> meta 验证 -> meta 标签的 content）。
+For SEO, simply enter the verification code for the respective search engine (domain verification -> meta verification -> content of meta tags).
 
-visitor 需要填入对应项目的许可码，一般包含在 js 文件/script 标签中。例如，clarity 一般是 js 代码中 function 的第五个参数，百度统计是 `?hm=` 后面的代码。
+For visitor, enter the corresponding project's license code, typically found in JS files/script tags. For example, clarity is generally the fifth parameter in the function in JS code, while Baidu Analytics is the code after `?hm=`.
 
-## 其他设置
+## Other Settings
 
-### 夜间模式
+### Dark Mode
 
 ```yaml
-darkmode: true # true/false分别对应打开/关闭夜间模式
+darkmode: true
+
+ # true/false for on/off dark mode
 ```
 
-默认情况下，是否开启夜间模式取决于（优先级从高到低）：
+By default, whether dark mode is enabled depends on (priority from high to low):
 
-- 访客点击头部自行选择
-- 浏览器设置主题色调
-- darkmode 配置
+- Visitor clicks on the header to choose
+- Browser settings for theme color
+- darkmode configuration
 
-### 自动定位
+### Auto-Scroll
 
 ::: tip
-开启后默认情况下，再次打开页面，会自动滚动到上次浏览的位置。
+When enabled, the page will automatically scroll to the last viewed position upon reopening.
 :::
 
 ```yaml
 auto_scroll: false
 ```
 
-### 网站标题自定义
+### Custom Website Title
 
 ::: tip
-自动网站点击之后和隐藏之后的标题，可覆盖原本呈现的文字。
-以下配置均在 `/_source/_data/languages.yml` 文件中修改。
-:::details 详细步骤
+Customize the title displayed after clicking and hiding the website.
+These configurations are modified in the `/_source/_data/languages.yml` file.
+:::details Detailed Steps
 
-- 在 Hexo 的根目录下 `source` 文件夹中；
-- 进入`_data` 目录（如果没有则创建）；
-- 在下面创建文件 `languages.yml`；
-- 修改网站标题在不同语言情况下 favicon show 时，和隐藏呈现的文字。
-:::
+- Within the Hexo root directory `source` folder;
+- Enter the `_data` directory (create if absent);
+- Create a file named `languages.yml` below;
+- Modify the website title when the favicon is shown and hidden for different languages.
+  :::
 
 ```yaml
 # language
@@ -248,15 +250,15 @@ ja:
     hide: 以梦为马！
 ```
 
-- 保存文件即可。
+- Save the file.
 
-## 图片自定义
+## Image Customization
 
-### 自定义网站轮播图
+### Custom Website Slideshow
 
-- 在上面的 `_data` 目录下创建 `images.yml`；
-- 在文件内存入轮播图图片即可替换原本自带的轮播图；
-- 类似如下，可存入图床当中。
+- Create an `images.yml` in the `_data` directory mentioned above;
+- Input slideshow images in the file to replace the default slideshow;
+- Similar to below, images can be hosted on image hosting platforms.
 
 ```yaml
 - https://i.imgtg.com/2023/03/09/YS2LU.jpg
@@ -271,68 +273,54 @@ ja:
 - https://i.imgtg.com/2023/03/09/Y0hOs.jpg
 ```
 
-自0.3.7版本开始，ShokaX 允许主页和文章使用不同的图片源：
-以下文件中以`_`开头的为主题文件夹下，其他均为`source/_data`目录下：
+Since version 0.3.7, ShokaX allows different image sources for the homepage and articles:
+Files starting with `_` are theme folder-specific, while others are in the `source/_data` directory:
 
-- `images_index.yml`为首页图片源文件，如果主题文件夹下存在`_images_index.yml`，则会使用主题文件夹下的文件，否则使用`source/_data/images_index.yml`
-- `images.yml`为通用图片源文件，作为首页的后备图片源和文章的图片源。如果未找到`images.yml`，则会使用主题文件夹下的`_images.yml`
+- `images_index.yml` is for the homepage image source. If `_images_index.yml` exists in the theme folder, it'll use that; otherwise, it'll use `source/_data/images_index.yml`.
+- `images.yml` is the general image source, acting as the fallback for the homepage and article image sources. If `images.yml` isn't found, it'll use `_images.yml` in the theme folder.
 
-### 首页精选与分类翻转块
+### Featured Homepage and Category Flip Blocks
 
-1、修改站点配置，在 Hexo 根目录 `/_config.yml` 中找到 `category_map`，配置每个分类对应的英文映射。
+1. Modify the site configuration: In the Hexo root directory `/_config.yml`, find `category_map` and configure the English mapping for each category.
 
-::: tip
-Hexo 会将路径中的特殊字符 `~\``!@#$%^&\*()-\_+={}|\;:"'<>,.?` 及空格全部会替换成 `-`。
+2. Set the directory for articles: `/source/_posts` is where articles are uploaded and saved.
+
+   `categories` should be written according to the `category_map` and file sequence. For instance, if a file belongs to the directory `计算机科学/C++/郑莉老师C++语言程序设计`, based on the mapping, in the `_posts` file path, it'll be under `/source/_posts` in `/computer-science/cpp/course-1`.
+
+   ```yaml
+   categories:
+     - [计算机科学, C++, 郑莉老师C++语言程序设计]
+   ```
+
+   ![Layout as shown](./directory-setup.png "Layout as shown")
+
+3. As shown in the image above, at the bottom of the file directory, include a `cover.jpg` file, which will serve as the image for the featured homepage. This will enable the "Featured Articles" and "Mouse Hover Flip" functionalities.
+
+## Experimental Features
+
+:::caution Risk Warning
+Experimental features are unstable, subject to potentially disruptive changes at any time, and some have noticeable side effects.
 :::
 
-```yaml
-category_map:
-  计算机科学: computer-science
-  C++: cpp
-  郑莉老师C++语言程序设计: course-1
-  Linux: Linux
-```
-
-2、设置文章所属的目录
-
-`/source/_posts` 为上传文章的保存目录。
-
-`categories` 的设置要根据上面的 `category_map` 以及文件顺序顺序书写。例如，某文件位于 `计算机科学/C++/郑莉老师C++语言程序设计` 目录下，根据上面的映射，在存储文件的 `_posts` 文件路径下就位于 `/source/_posts` 下 `/computer-science/cpp/course-1` 目录下。
-
-```yaml
-categories:
-  - [计算机科学, C++, 郑莉老师C++语言程序设计]
-```
-
-![如图所示的布局](./目录设置.png "如图所示的布局")
-
-3、如上图所示，在最底部的文件目录方式 `cover.jpg` 文件，此图片将作为首页精选的图片。自此 `文章精选` 和 `鼠标悬浮翻转` 也将实现。
-
-## 实验性特性
-
-:::caution 风险提示
-实验性特性均不稳定，随时可能引入破坏性更改，且部分有明显副作用。
-:::
-
-::: details 长文章优化
+::: details Long Article Optimization
 
 ```yaml
 experiments:
-  optimizeLongPosts: true # 开启长文章优化
+  optimizeLongPosts: true # Enable long article optimization
 ```
 
-当文章过长时（≥5 万字），文章页面的 FPS 会下降到 10FPS 左右，部分渲染性能较差的设备还会出现假死现象。
+When an article is very long (≥50,000 words), the FPS (Frames Per Second) on the article page drops to around 10 FPS. Devices with poor rendering performance may even experience freezes.
 
-实验室数据显示在 2 万字时 FPS 便会出现波动，3 万字时就可以感觉到波动了，5 万字时页面已经十分卡顿。如果页面有大量 Katex 公式则此问题会更严重。
+Lab data shows that at 20,000 words, FPS starts fluctuating, noticeable fluctuations start at 30,000 words, and at 50,000 words, the page is severely laggy. If the page contains a large number of Katex formulas, this issue becomes more severe.
 
-此问题在 shoka 时期就已存在，因此 shokaX 引入了长文章优化，底层原理是使用 `content-visibility` 暴力缩短渲染范围以大幅提高性能。
+This issue existed during the Shoka era, hence ShokaX introduces long article optimization, using `content-visibility` to drastically reduce the rendering range and significantly improve performance.
 
-实验室数据显示此选项可将 FPS 由 10 提升到 25 左右（4x CPU slowdown）并解决卡死问题，但此功能存在 *导航栏抖动* 和 *进度条抖动* 问题，可能影响到浏览体验。
+Lab data suggests this option can increase FPS from 10 to around 25 (4x CPU slowdown) and solve freezing issues. However, this feature presents *Navbar Jitter* and *Progress Bar Jitter* problems, potentially impacting browsing experience.
 
-- 导航栏抖动：在滑动时导航栏会反复弹出收回，时间较短（一般不超过 1s）。
-- 进度条抖动：返回顶部的文字和滑动条的长度与文章实际长度不符，存在 ±1-5% 的误差。
+- Navbar Jitter: The navbar repeatedly pops in and out during scrolling, for a short duration (usually not exceeding 1s).
+- Progress Bar Jitter: The text for returning to the top and the length of the scrollbar don't match the actual article length, with an error of ±1-5%.
 
-上述问题均是由于此方法导致的 `window.scrollY` 抖动引起的，如果你有好的解决方法欢迎发起 Pull Request。
+The aforementioned issues are caused by `window.scrollY` jitter due to this method. If you have a solution, feel free to initiate a Pull Request.
 
-综上所述，长文章优化功能仅建议在有文章字数超过 3 万字或站点主要面向渲染性能较差的设备时启用。
+In summary, the long article optimization feature is recommended only for articles exceeding 30,000 words or if the site primarily targets devices with poor rendering performance.
 :::

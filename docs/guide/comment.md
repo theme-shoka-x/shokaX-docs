@@ -57,27 +57,6 @@ twikoo:
 
 :::
 
-## git 系评论系统
-
-此系列均使用 git 相关系统进行数据储存，故分为一类。
-受制于 oauth 权限问题，部分 git 系评论系统存在严重的隐私泄露问题，建议查看对应社区 issues 后使用。
-:::details gitalk
-[gitalk](https://github.com/gitalk/gitalk/blob/master/readme-cn.md) 是一个基于 GitHub Issue 和 Preact 开发的评论插件。
-配置内容如下：
-
-```yaml
-gitalk:
-  # 参考 gitalk 官方教程填入即可，下列键和 gitalk 配置键对应
-  clientID:
-  clientSecret:
-  repo:
-  owner:
-  admin:
-  proxy: # CORS 代理，选填
-```
-
-:::
-
 ## 添加评论系统详细教程
 
 ### waline
