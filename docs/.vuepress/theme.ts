@@ -29,6 +29,17 @@ export default hopeTheme({
         pwa: {
             cachePic: true,
             update: "available"
+        },
+        docsearch: {
+            apiKey: 'c30c4d59605d21483f6b76cdde63ce96',
+            appId: 'MTVNNUDZBE',
+            indexName: 'kaitaku',
+            placeholder: '请输入您需要搜索的内容',
+            translations: {
+                button: {
+                    buttonText: '搜索文档'
+                }
+            }
         }
     },
     pure: true,
