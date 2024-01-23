@@ -79,7 +79,7 @@ In settings, change 'FontClass/Symbol Prefix' from the default 'icon-' to 'i-'; 
 
 #### 4. Generate Code
 
-Click "No code, click here to generate". The following link will appear: 
+Click "No code, click here to generate". The following link will appear:
 
 `//at.alicdn.com/t/c/font_4415496_59g1326wajd.css`
 
