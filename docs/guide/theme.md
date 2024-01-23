@@ -53,7 +53,7 @@ Iconfont用于在各种界面元素中显示小图标，包括导航栏、社交
 
 若您希望自定义这些小图标，请遵循下列步骤：
 
-#### 1、 接受Iconfont项目邀请
+#### 1、接受Iconfont项目邀请
 访问 [Iconfont项目邀请链接](https://www.iconfont.cn/invite?type=project&token=LotXIguNze4Ce2GI#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80%8Cshoka%E3%80%8D) 来接受邀请。
 
 :::tip
@@ -74,7 +74,7 @@ Iconfont用于在各种界面元素中显示小图标，包括导航栏、社交
 #### 3、点击项目设置
 在设置中，将“FontClass/Symbol前缀”从默认的“icon-”更改为“i-”，将“Font Family”更改为“ic”，并确保选择了WOFF2、WOFF、TTF、EOF和SVG格式，然后保存。
 
-#### 4、 生成代码
+#### 4、生成代码
 点击“没有代码，点击这里生成”，将会得到类似`//at.alicdn.com/t/c/font_4415496_59g1326wajd.css`的链接。
 
 提取字符串`4415496_59g1326wajd`用于更新配置文件中的'iconfont'项：
@@ -102,7 +102,7 @@ iconfont: "4415496_59g1326wajd"
 }
 ```
 
-#### 7. 在您的配置中应用
+#### 7、在您的配置中应用
 
 > 例如添加社交媒体链接中的Gitee图标，配置如下：
 
