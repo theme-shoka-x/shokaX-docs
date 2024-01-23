@@ -40,7 +40,77 @@ js: "js" # js 存放目录 (不建议改动)
   - `paypal.png` PayPal 捐赠收款码
   - `search.png` 搜索下显示的图片
 
-## 导航栏、社交链接、侧边栏、大标题
+## Iconfont图标、导航栏、社交链接、侧边栏、大标题
+
+### Iconfont图标
+
+Iconfont用于在各种界面元素中显示小图标，包括导航栏、社交链接按钮、侧边栏图标、音乐播放器等。
+
+:::tip
+1. shokaX使用的是原shoka项目克隆的iconfont图标库，并添加了一些自定义图标。
+2. Iconfont使用的是阿里云CDN，部分地区的用户可能无法访问。
+:::
+
+若您希望自定义这些小图标，请遵循下列步骤：
+
+#### 1、 接受Iconfont项目邀请
+访问 [Iconfont项目邀请链接](https://www.iconfont.cn/invite?type=project&token=LotXIguNze4Ce2GI#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80%8Cshoka%E3%80%8D) 来接受邀请。
+
+:::tip
+此邀请链接理论上长期有效，若过期请提issue。
+:::
+
+#### 2、进入项目
+为了将图标添加到您的项目，请执行以下操作：
+- 批量操作
+- 全选
+- 批量加入购物车
+- 点击购物车
+- 添加至项目
+- 点击新建项目图标
+- 输入自己的项目名称
+- 确定
+
+#### 3、点击项目设置
+在设置中，将“FontClass/Symbol前缀”从默认的“icon-”更改为“i-”，将“Font Family”更改为“ic”，并确保选择了WOFF2、WOFF、TTF、EOF和SVG格式，然后保存。
+
+#### 4、 生成代码
+点击“没有代码，点击这里生成”，将会得到类似`//at.alicdn.com/t/c/font_4415496_59g1326wajd.css`的链接。
+
+提取字符串`4415496_59g1326wajd`用于更新配置文件中的'iconfont'项：
+
+```yaml
+# //at.alicdn.com/t/c/font_4415496_59g1326wajd.css => 4415496_59g1326wajd
+iconfont: "4415496_59g1326wajd"
+```
+#### 5、自定义iconfont图标
+现在您可以向项目添加新图标或修改现有图标。如非必要，避免删除图标，因为这可能会影响渲染。
+
+#### 6、修改_iconfont.styl文件
+
+打开文件`/source/css/_iconfont.styl`进行编辑。
+
+在浏览器中打开您的iconfont链接（此处以`//at.alicdn.com/t/c/font_4415496_59g1326wajd.css`为例，请替换为实际链接）。
+
+复制新增图标对应的以“.i-”为前缀的代码，添加到`/source/css/_iconfont.styl`文件末尾。
+
+例如，添加Gitee图标的代码如下：
+
+```css
+.i-gitee:before {
+  content: "\e607";
+}
+```
+
+#### 7. 在您的配置中应用
+
+> 例如添加社交媒体链接中的Gitee图标，配置如下：
+
+```yaml
+# 在此添加您的社交媒体链接
+social:
+  gitee: https://gitee.com/yourname || gitee || "#e60026"
+```
 
 ### 导航栏
 

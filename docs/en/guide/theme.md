@@ -40,7 +40,98 @@ Currently **supports** static file parsing for `*.jpg`, `*.png`, `*.ico` files o
   - `paypal.png` PayPal donation QR code
   - `search.png` image displayed under search
 
-## Navbar, Social Links, Sidebar, Big Title
+## Iconfont, Navbar, Social Links, Sidebar, Big Title
+
+### Iconfont
+The iconfont is utilized for displaying small icons in various interface elements, including navigation bars, social link buttons, sidebar icons, music players, and beyond.
+
+:::tip
+1. shokaX uses the iconfont project for the original shoka clone, adding a few custom icons.
+2. Iconfont uses Alibaba Cloud CDN, which may not be accessible in some regions outside China.
+:::
+
+If you want to customize the small icons in the navbar, social links, sidebar, music player, and so on, please follow the steps below:
+
+#### 1. Accept the Invitation of the Iconfont Project
+[Click here to accept the invitation](https://www.iconfont.cn/invite?type=project&token=LotXIguNze4Ce2GI#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80% 8Cshoka%E3%80%8D)
+
+:::tip
+This invitation link is theoretically valid for a long time, please raise an issue if it expires.
+:::
+
+#### 2. Enter the Project
+To add icons to your project, follow these steps:
+- Go to the batch operation section.
+- Select all items you wish to add.
+- Click 'Add to Cart' to batch add the selected items.
+- Open your cart, review your items, and then click 'Add to Project'.
+- Click on the icon to create a new project, enter a name for your project, and click 'OK' to save.
+
+#### 3. Enter Project Settings
+In settings, change 'FontClass/Symbol Prefix' from the default 'icon-' to 'i-'; change 'Font Family' to 'ic'; and ensure the formats WOFF2, WOFF, TTF, EOF, and SVG are all selected; then save.
+
+#### 4. Generate Code
+Click "No code, click here to generate". The following link will appear: '//at.alicdn.com/t/c/font_4415496_59g1326wajd.css'
+
+Extract the string "4415496_59g1326wajd" and update the 'iconfont' entry in your configuration file with the new code:
+
+```yaml
+# //at.alicdn.com/t/c/font_4415496_59g1326wajd.css => 4415496_59g1326wajd
+iconfont: "4415496_59g1326wajd"
+```
+#### 5. Customize Iconfont Icons
+You can now add new icons to your project or modify existing ones. Avoid deleting icons if not necessary, as it may affect rendering.
+
+#### 6. Modify the _iconfont.sty File
+
+Open the file `/source/css/_iconfont.sty` for editing.
+
+Access the link (replace it with your own) `//at.alicdn.com/t/c/font_4415496_59g1326wajd.css` in your browser.
+
+Select and copy the code corresponding to the '.i-' prefix for the icon you've added and paste it at the end of the `/source/css/_iconfont.sty` file.
+
+For example:
+
+```css
+.i-gitee:before {
+  content: "\e607";
+}
+```
+
+
+#### 7. Implement in Your Configuration
+
+> For example, to add the Gitee icon to your site's social media links:
+
+```css
+.i-gitee:before {
+  content: "\e607";
+}
+```
+
+> Then, you would configure it like so:
+
+```yaml
+# Add your social media link
+social:
+  gitee: https://gitee.com/yourname || gitee || "#e60026"
+```
+
+> For example, to add a custom 'works' icon to your site's menu:
+
+```css
+.i-zuopin:before {
+  content: "\e630";
+}
+```
+
+> The configuration would look like this:
+
+```yaml
+# Add a custom menu item
+menu:
+  link: /page1/ || zuopin
+```
 
 ### Navbar
 
