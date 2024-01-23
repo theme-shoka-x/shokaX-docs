@@ -101,15 +101,7 @@ For example:
 
 #### 7. Implement in Your Configuration
 
-> For example, to add the Gitee icon to your site's social media links:
-
-```css
-.i-gitee:before {
-  content: "\e607";
-}
-```
-
-> Then, you would configure it like so:
+> For example, to add the Gitee icon to your site's social media links, you would configure it like so:
 
 ```yaml
 # Add your social media link
@@ -117,21 +109,6 @@ social:
   gitee: https://gitee.com/yourname || gitee || "#e60026"
 ```
 
-> For example, to add a custom 'works' icon to your site's menu:
-
-```css
-.i-zuopin:before {
-  content: "\e630";
-}
-```
-
-> The configuration would look like this:
-
-```yaml
-# Add a custom menu item
-menu:
-  link: /page1/ || zuopin
-```
 
 ### Navbar
 
