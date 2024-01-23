@@ -62,10 +62,6 @@ twikoo 等评论系统也提供了迁移工具，可以自行选择
 assets: "assets"
 ```
 
-:::tip
-截止 0.1.8 中，ShokaX 的 advVendors 和 vendors 是共存的，请不要删除这两个的任何一个
-:::
-
 ShokaX 提供了官方的 ICP 及网安备案配置：
 
 ```yaml
