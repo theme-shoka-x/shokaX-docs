@@ -46,8 +46,10 @@ Currently **supports** static file parsing for `*.jpg`, `*.png`, `*.ico` files o
 The iconfont is utilized for displaying small icons in various interface elements, including navigation bars, social link buttons, sidebar icons, music players, and beyond.
 
 :::tip
+
 1. shokaX uses the iconfont project for the original shoka clone, adding a few custom icons.
 2. Iconfont uses Alibaba Cloud CDN, which may not be accessible in some regions outside China.
+
 :::
 
 If you want to customize the small icons in the navbar, social links, sidebar, music player, and so on, please follow the steps below:
