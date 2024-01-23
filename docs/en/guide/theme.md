@@ -43,6 +43,7 @@ Currently **supports** static file parsing for `*.jpg`, `*.png`, `*.ico` files o
 ## Iconfont, Navbar, Social Links, Sidebar, Big Title
 
 ### Iconfont
+
 The iconfont is utilized for displaying small icons in various interface elements, including navigation bars, social link buttons, sidebar icons, music players, and beyond.
 
 :::tip
@@ -55,7 +56,8 @@ The iconfont is utilized for displaying small icons in various interface element
 If you want to customize the small icons in the navbar, social links, sidebar, music player, and so on, please follow the steps below:
 
 #### 1. Accept the Invitation of the Iconfont Project
-[Click here to accept the invitation](https://www.iconfont.cn/invite?type=project&token=LotXIguNze4Ce2GI#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80% 8Cshoka%E3%80%8D)
+
+[Click here to accept the invitation](https://www.iconfont.cn/invite?type=project&token=LotXIguNze4Ce2GI#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80%8Cshoka%E3%80%8D)
 
 :::tip
 This invitation link is theoretically valid for a long time, please raise an issue if it expires.
