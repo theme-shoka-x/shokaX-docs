@@ -60,7 +60,9 @@ This invitation link is theoretically valid for a long time, please raise an iss
 :::
 
 #### 2. Enter the Project
+
 To add icons to your project, follow these steps:
+
 - Go to the batch operation section.
 - Select all items you wish to add.
 - Click 'Add to Cart' to batch add the selected items.
@@ -68,9 +70,11 @@ To add icons to your project, follow these steps:
 - Click on the icon to create a new project, enter a name for your project, and click 'OK' to save.
 
 #### 3. Enter Project Settings
+
 In settings, change 'FontClass/Symbol Prefix' from the default 'icon-' to 'i-'; change 'Font Family' to 'ic'; and ensure the formats WOFF2, WOFF, TTF, EOF, and SVG are all selected; then save.
 
 #### 4. Generate Code
+
 Click "No code, click here to generate". The following link will appear: '//at.alicdn.com/t/c/font_4415496_59g1326wajd.css'
 
 Extract the string "4415496_59g1326wajd" and update the 'iconfont' entry in your configuration file with the new code:
@@ -79,7 +83,9 @@ Extract the string "4415496_59g1326wajd" and update the 'iconfont' entry in your
 # //at.alicdn.com/t/c/font_4415496_59g1326wajd.css => 4415496_59g1326wajd
 iconfont: "4415496_59g1326wajd"
 ```
+
 #### 5. Customize Iconfont Icons
+
 You can now add new icons to your project or modify existing ones. Avoid deleting icons if not necessary, as it may affect rendering.
 
 #### 6. Modify the _iconfont.sty File
@@ -98,7 +104,6 @@ For example:
 }
 ```
 
-
 #### 7. Implement in Your Configuration
 
 > For example, to add the Gitee icon to your site's social media links, you would configure it like so:
@@ -108,7 +113,6 @@ For example:
 social:
   gitee: https://gitee.com/yourname || gitee || "#e60026"
 ```
-
 
 ### Navbar
 
