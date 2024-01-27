@@ -14,4 +14,4 @@ At the same time，one of the former users of Shoka who is in our team founded s
 - Shoka is lack of docs while some of the features aren't have any guidelines of tips,which is ShokaX solving.
 - The community resources of Shoka is hard to use, some Pull Request for fixing the bugs aren't merged yet.
 
-In order to fix those problems, ShokaX and its subprojects was founded on August 2022(production ready on March 2023), and applyed ourselves to fix the problems that Shoka have now.
+In order to fix those problems, ShokaX and its subprojects was founded on August 2022(production ready on March 2023), and applied ourselves to fix the problems that Shoka have now.

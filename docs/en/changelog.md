@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.11
+
+* feat: import mouse-firework by [@D-Sketon](https://github.com/D-Sketon) in [#192](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/192)
+* build: CJS 与 ESM 模块分离 by [@zkz098](https://github.com/zkz098) 
+
+**Full Changelog**: [v0.3.10...v0.3.11](https://github.com/theme-shoka-x/hexo-theme-shokaX/compare/v0.3.10...v0.3.11)
+
+## 0.3.10
+
+* fix: Index 在有且只有置顶文章时渲染错误 by [@D-Sketon](https://github.com/D-Sketon) in [#182](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/182)
+* fix: Index 无法正确渲染 sticky 显式设置为 false 的文章 by [@D-Sketon](https://github.com/D-Sketon) in [#184](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/184)
+* chore: anime升级 by [@D-Sketon](https://github.com/D-Sketon) in [#186](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/186)
+* fix: cover和index_cover使用错误 by [@zkz098](https://github.com/zkz098) in [185f0fc](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/185f0fc7aa460d47e25f9b9cad890f1aa83a0c93)
+* refactor: 删除 git 系评论系统 by [@zkz098](https://github.com/zkz098) in [b82f639](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/b82f6390a16172165d395c3ede9dc81b622888f3)
+
+**Full Changelog**: [v0.3.9...v0.3.10](https://github.com/theme-shoka-x/hexo-theme-shokaX/compare/v0.3.9...v0.3.10)
+
 ## 0.3.9
 
 * fix: links href错误问题 by [@zkz098](https://github.com/zkz098) in [923da30](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/923da30f07a78c7603d5ce6cffdc5bacd8b8bae2)

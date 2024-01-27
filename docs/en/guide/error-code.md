@@ -1,6 +1,6 @@
 # SXEC(ShokaX Error Code)
 
-SXEC 有两种解释，一种是 `ShokaX Enviroment Check`，另一种则是 `ShokaX Error Code`，本文档取后者。
+SXEC 有两种解释，一种是 `ShokaX Environment Check`，另一种则是 `ShokaX Error Code`，本文档取后者。
 
 ## SXEC 1xx
 

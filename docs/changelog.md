@@ -8,6 +8,7 @@
 **Full Changelog**: [v0.3.10...v0.3.11](https://github.com/theme-shoka-x/hexo-theme-shokaX/compare/v0.3.10...v0.3.11)
 
 ## 0.3.10
+
 * fix: Index 在有且只有置顶文章时渲染错误 by [@D-Sketon](https://github.com/D-Sketon) in [#182](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/182)
 * fix: Index 无法正确渲染 sticky 显式设置为 false 的文章 by [@D-Sketon](https://github.com/D-Sketon) in [#184](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/184)
 * chore: anime升级 by [@D-Sketon](https://github.com/D-Sketon) in [#186](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/186)
