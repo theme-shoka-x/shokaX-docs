@@ -107,17 +107,17 @@ Adds an animation to the timeline
 const timelineInstance = anime()
   .timeline()
   .add({
-    targets: particules,
+    targets: particles,
     duration: anime.random(1200, 1800),
     easing: "easeOutExpo",
-    update: renderParticule,
+    update: renderParticle,
     radius: 0.1,
   })
   .add({
     targets: circle,
     duration: anime.random(1200, 1800),
     easing: "easeOutExpo",
-    update: renderParticule,
+    update: renderParticle,
     radius: anime.random(80, 160),
     lineWidth: 0,
   });
@@ -137,17 +137,17 @@ Starts the timeline animation
 anime()
   .timeline()
   .add({
-    targets: particules,
+    targets: particles,
     duration: anime.random(1200, 1800),
     easing: "easeOutExpo",
-    update: renderParticule,
+    update: renderParticle,
     radius: 0.1,
   })
   .add({
     targets: circle,
     duration: anime.random(1200, 1800),
     easing: "easeOutExpo",
-    update: renderParticule,
+    update: renderParticle,
     radius: anime.random(80, 160),
     lineWidth: 0,
   })
@@ -269,16 +269,16 @@ type EasingTypes =
 // Create a circle
 const circle = createCircle(x, y);
 // Create an empty array to store firework particles
-const particules = [];
+const particles = [];
 // Loop to create firework particles
-for (let i = 0; i < numberOfParticules; i++) {
-  particules.push(createParticule(x, y));
+for (let i = 0; i < numberOfParticles; i++) {
+  particles.push(createParticle(x, y));
 }
 // Create an anime.js timeline and add animations
 anime()
   .timeline()
   .add({
-    targets: particules,
+    targets: particles,
     duration: anime.random(1200, 1800),
     easing: "easeOutExpo",
     update: (targets) => {
