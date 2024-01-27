@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.12
+
+* build(deps): bump mouse-firework from 0.0.3 to 0.0.4 by @dependabot in [#193](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/193)
+* 使用jsdelivr加速waline在国内访问速度 by [@FidStyle](https://github.com/FidStyle) in [#197](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/197)
+* fix: 解决最新评论 // 显示错误 by [@FidStyle](https://github.com/FidStyle) in [#198](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/198)
+* refactor: addVendors和vendors统一 by [@zkz098](https://github.com/zkz098)
+* refactor: 使用 FetchAPI 检查版本更新 by [@zkz098](https://github.com/zkz098) in [c5cba32](https://github.com/theme-shoka-x/hexo-theme-shokaX/commit/c5cba32a101375a74a9d15dc6da18fc78193b86d)
+
+**Full Changelog**: [v0.3.11...v0.3.12](https://github.com/theme-shoka-x/hexo-theme-shokaX/compare/v0.3.11...v0.3.12)
+
 ## 0.3.11
 
 * feat: import mouse-firework by [@D-Sketon](https://github.com/D-Sketon) in [#192](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/192)
