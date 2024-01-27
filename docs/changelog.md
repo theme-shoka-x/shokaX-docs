@@ -3,7 +3,7 @@
 ## 0.3.11
 
 * feat: import mouse-firework by [@D-Sketon](https://github.com/D-Sketon) in [#192](https://github.com/theme-shoka-x/hexo-theme-shokaX/pull/192)
-* build: CJS 与 ESM 模块分离 by [@zkz098](https://github.com/zkz098) 
+* build: CJS 与 ESM 模块分离 by [@zkz098](https://github.com/zkz098)
 
 **Full Changelog**: [v0.3.10...v0.3.11](https://github.com/theme-shoka-x/hexo-theme-shokaX/compare/v0.3.10...v0.3.11)
 
