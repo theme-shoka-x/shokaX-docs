@@ -1,48 +1,41 @@
-# 性能优化
+# Performance Optimization
 
-## 性能报告
+## Performance Report
 
 :::tip
-下方数据均基于 lighthouse 移动设备规格测试
+The data below is based on lighthouse mobile device specifications testing.
 :::
-针对预览网站和 shoka 的实地测试: \
-![性能报告](perf-1.webp)
+For preview websites and real-world testing of Shoka: \
+![Performance Report](perf-1.webp)
 
-- 请注意，由于各预览网站间的差异(CDN、shokaX 版本、第三方 js)，实地测试**并不能**反应 ShokaX 实际部署时的性能，只是一个参考数据
+- Please note that due to differences between preview websites (CDN, shokaX version, third-party js), real-world testing **does not** reflect the actual performance of ShokaX when deployed, it is just a reference data.
 
-针对长文章(字数 50k+)的实验室数据: \
-![性能报告](perf-2.webp)
+For long articles (50k+ words) laboratory data: \
+![Performance Report](perf-2.webp)
 
-- ShokaX-LPO 指开启长文章优化的 ShokaX v0.2.9
-- 受制于第三方因素(例如`hexo s`无文本压缩)，此数据无法准确反应生产环境下的 ShokaX 长文章性能，仅供参考
+- ShokaX-LPO refers to ShokaX v0.2.9 with long article optimization enabled.
+- Due to third-party factors (such as no text compression in `hexo s`), this data cannot accurately reflect the performance of ShokaX long articles in a production environment, it is for reference only.
 
-## 优化网页
+## Web Page Optimization
 
-Shoka 系主题的图片都是性能影响的最大因素，可通过如下方法优化:
+The images in the Shoka theme are the biggest factor affecting performance and can be optimized using the following methods:
 
-### 使用 webp 或 avif 等现代图片格式
+### Use modern image formats like webp or avif
 
-根据 ShokaX 开发者测试，对 shoka 主题图片进行 webp 转换+等级 6 压缩，可以在不影响画质(肉眼难以分辨)的情况下，
-将大小降低约 65%。
-这项可以大幅优化 FCP(约减少 50%)和 LCP(约减少 40%)并提升初访问体验。
-由于 ShokaX 已不再支持 IE11，因此 webp 的兼容性问题近乎为 0
+According to ShokaX developers' tests, converting Shoka theme images to webp format with level 6 compression can reduce the size by approximately 65% without affecting the image quality (difficult to discern with the naked eye). This can significantly optimize FCP (reduced by approximately 50%) and LCP (reduced by approximately 40%) and improve the initial loading experience. Since ShokaX no longer supports IE11, webp has almost zero compatibility issues.
 
-### 开启`fixedCover`功能
+### Enable the `fixedCover` feature
 
-根据社区测试，此选项可以在不进行 webp 的优化的情况下，将 FCP 降低 17%，LCP 降低 80%。
-此功能会让头图仅显示一张以大幅降低网络负载
+According to community tests, enabling this option can reduce FCP by 17% and LCP by 80% without optimizing webp. This feature only displays a single cover image, significantly reducing network load.
 
-### 减少插件使用
+### Reduce plugin usage
 
-平均每个插件都会让 FCP 增加 0.1-0.3 秒并让 SI 增加 0.3-0.8 秒，尤其是 qweather 类插件
-会发起大量的 HTTP 请求并拖慢加载速度。
+On average, each plugin increases FCP by 0.1-0.3 seconds and SI by 0.3-0.8 seconds, especially plugins like qweather that make numerous HTTP requests and slow down loading speed.
 
-### 自编译 typescript 和调整压缩配置
+### Compile TypeScript and adjust compression configuration
 
-ShokaX 稳定版提供了预编译的 javascript ES2017 版本，如果你的站点需要 ES6 兼容或希望拥有更高的性能，请参考二次开发或 typescript 官方文档自编译 ts \
-ShokaX 默认 terser 使用 ES2018 作为压缩配置，可自行调整
+The stable version of ShokaX provides pre-compiled JavaScript ES2017. If your site requires ES6 compatibility or you want higher performance, refer to the documentation for secondary development or TypeScript official documentation to compile TypeScript. ShokaX uses ES2018 as the default compression configuration for terser, but you can adjust it as needed.
 
-### 关闭不使用的功能
+### Disable unused features
 
-ShokaX 提供了关闭部分功能的配置，例如`noPlayer`和`disableVL`，这两项都可以提高 js 运行时效率并缩小 js 体积。
-`noPlayer`理论上可以减少 20%的 js 大小。`disableVL`的性能优化几乎为 0，但提高了多标签页下的用户体验
+ShokaX provides configuration options to disable certain features, such as `noPlayer` and `disableVL`. Both of these options can improve runtime efficiency and reduce JavaScript size. `noPlayer` theoretically reduces JavaScript size by 20%. The performance optimization of `disableVL` is almost negligible, but it improves the user experience in multi-tab browsing.
