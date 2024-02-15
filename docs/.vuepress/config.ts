@@ -1,7 +1,7 @@
 import { defineUserConfig} from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { viteBundler } from 'vuepress'
+import { viteBundler } from '@vuepress/bundler-vite'
 import theme from "./theme";
 export default defineUserConfig({
     plugins: [
