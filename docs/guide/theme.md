@@ -15,9 +15,9 @@ css: "css" # css 存放目录 (不建议改动)
 js: "js" # js 存放目录 (不建议改动)
 ```
 
-#### 自定义网站图片
+### 自定义网站图片
 
-::: tip
+:::: tip
 以下文件的修改均在 `/source/_data/` 中预设的素材文件夹中进行，如 `/source/_data/assets`
 :::details 详细步骤
 
@@ -25,10 +25,7 @@ js: "js" # js 存放目录 (不建议改动)
 - 进入 `/_data` 目录（如果没有则创建）；
 - 根据 `/_config.shokax.yml` 或 `/_config.shokaX.yml` 中自定义的图片目录（如 `assets` ），在  `_data` 目录下创建对应的目录。
 :::
-
-:::warning
-现**仅支持**`*.jpg`，`*.png`，`*.ico`的**静态文件**解析
-:::
+::::
 
 - 不同的文件名称分别代表对应的图片。
   - `avatar.jpg` 默认情况下对应主页上的个人头像，可修改
@@ -39,6 +36,42 @@ js: "js" # js 存放目录 (不建议改动)
   - `wechatpay.png` 微信捐赠收款码
   - `paypal.png` PayPal 捐赠收款码
   - `search.png` 搜索下显示的图片
+
+:::tips
+大多数文件名可调，建议尽可能地将 png、jpg 替换为 webp 或 avif 以提高性能
+:::
+
+### 功能模块
+
+此处指示 ShokaX 功能模块是否开启，在不使用的情况下建议关闭对应模块
+
+```yaml
+modules:
+  player: true # 启用音乐播放器
+  fireworks: true # 启用鼠标点击烟花特效
+  unlazyHash: false # 启用unlazy hash预览图支持
+  visibilityListener: true # 启用可见度监听器
+  tabs: true # 启用选项卡扩展支持，如需开启 summary 功能请一并开启
+  quiz: true # 启用文章内问题扩展支持
+  fancybox: true # 启用 fancybox 支持（不建议禁用）
+```
+
+部分配置的解释：
+
+- 如果需要使用 media tag，请开启 player 模块
+- 如果不喜欢切换标签页改变标题这个功能，请关闭 visibilityListener
+
+### 主页配置
+
+```yaml
+homeConfig:
+  gradient: false # 使用CSS渐变作为文章封面
+  # fixedCover 性能比默认的更好，且开启时将启用LCP优化和预加载
+  fixedCover: "" # 主页面cover(为空则使用bing随机图片)
+```
+
+当 gradient 启用时，将使用渐变色封面代替`_images.yml`，渐变色集不可控制
+当 fixedCover 启用时，上方的图片轮播集将被锁定为 fixedCover 配置的图片，`_images.yml`不再控制头图
 
 ## Iconfont图标、导航栏、社交链接、侧边栏、大标题
 
@@ -240,6 +273,7 @@ performance:
 `preConnect` 选项会对链接进行预连接，这会极大加速 CDN 文件/评论系统的加载速度，但使用过多会影响首屏性能。
 
 `dnsPrefetch` 适用于“不值得使用 `pre-connect`”的，此模式仅会优化 DNS 解析，适用于部分非关键站外链接（例如广告和站外视频）。
+:::
 
 ## SEO 优化和访客优化
 
@@ -286,7 +320,7 @@ auto_scroll: false
 
 ### 网站标题自定义
 
-::: tip
+:::: tip
 自动网站点击之后和隐藏之后的标题，可覆盖原本呈现的文字。
 以下配置均在 `/_source/_data/languages.yml` 文件中修改。
 :::details 详细步骤
@@ -296,6 +330,7 @@ auto_scroll: false
 - 在下面创建文件 `languages.yml`；
 - 修改网站标题在不同语言情况下 favicon show 时，和隐藏呈现的文字。
 :::
+::::
 
 ```yaml
 # language
