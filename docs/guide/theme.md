@@ -37,7 +37,7 @@ js: "js" # js 存放目录 (不建议改动)
   - `paypal.png` PayPal 捐赠收款码
   - `search.png` 搜索下显示的图片
 
-:::tips
+:::tip
 大多数文件名可调，建议尽可能地将 png、jpg 替换为 webp 或 avif 以提高性能
 :::
 
