@@ -33,6 +33,7 @@ minify:
       targets: ">= 0.5%" # browserslist 格式的 target
     exclude: # 排除文件，接受 string[]，需符合 micromatch 格式
   html:
+    minifier: html-minifier
     enable: true # 开启 HTML 优化
     options:
       comments: false # 是否保留注释内容
@@ -48,6 +49,17 @@ minify:
       # 我们更建议使用 Service Worker 来在用户侧实现 replaceSrc 的功能，这将能够以一种侵入式更小的方式实现链接替换
     exclude:
 ```
+:::caution
+`minify.html`自0.1.5起添加`minifier`选项，允许使用：
+- `html-minifier`：更稳定
+- `minify-html`：更快
+
+但由于 [minify-html#181](https://github.com/wilsonzlin/minify-html/issues/181) 和 [minify-html#170](https://github.com/wilsonzlin/minify-html/issues/170)，
+**minify-html 并不可靠，且大概率会产生错误的 html（例[ShokaX#220](https://github.com/theme-shoka-x/hexo-theme-shokaX/issues/220) 和 [ShokaX#243](https://github.com/theme-shoka-x/hexo-theme-shokaX/discussions/243)）**
+**无论如何，不建议在上述问题修复前使用`minify-html`**
+
+如果您正在使用 0.1.4 或更早版本或使用`minify-html`缩小器时，如果页面渲染错误，将缩小器调整为`html-minifier`大概率能修复错误
+:::
 
 自动 WebP 化功能在初次`hexo g`或`hexo cl`后不可用，需要再运行一次`hexo g`
 
