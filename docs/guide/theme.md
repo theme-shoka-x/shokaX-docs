@@ -110,7 +110,7 @@ Iconfont用于在各种界面元素中显示小图标，包括导航栏、社交
 
 #### 3、点击项目设置
 
-在设置中，将“FontClass/Symbol前缀”从默认的“icon-”更改为“i-”，将“Font Family”更改为“ic”，并确保选择了WOFF2、WOFF、TTF、EOF和SVG格式，然后保存。
+在设置中，将“FontClass/Symbol前缀”从默认的“icon-”更改为“i-”，将“Font Family”更改为“ic”，并确保选择了WOFF2、WOFF、TTF、EOT和SVG格式，然后保存。
 
 #### 4、生成代码
 
