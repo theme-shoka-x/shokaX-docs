@@ -129,11 +129,23 @@ iconfont: "4415496_59g1326wajd"
 
 #### 6、修改_iconfont.styl文件
 
-打开文件`/source/css/_iconfont.styl`进行编辑。
+打开文件`/node_modules/hexo-theme-shokax/source/css/_iconfont.styl`进行编辑。
+
+:::tip
+为了方便操作，建议为本主题文件夹创建软链接。
+
+| 终端        | 命令                                                         |
+|-----------|------------------------------------------------------------|
+| Windows CMD | `mklink /J .\themes\shokax .\node_modules\hexo-theme-shokax` |
+| Linux Bash  | `ln -s ./themes/shokax ./node_modules/hexo-theme-shokax`     |
+
+
+此时`_iconfont.styl`路径为`/themes/shokax/source/css/_iconfont.styl`。
+:::
 
 在浏览器中打开您的iconfont链接（此处以`//at.alicdn.com/t/c/font_4415496_59g1326wajd.css`为例，请替换为实际链接）。
 
-复制新增图标对应的以“.i-”为前缀的代码，添加到`/source/css/_iconfont.styl`文件末尾。
+复制新增图标对应的以“.i-”为前缀的代码，添加到`_iconfont.styl`文件末尾。
 
 例如，添加Gitee图标的代码如下：
 
