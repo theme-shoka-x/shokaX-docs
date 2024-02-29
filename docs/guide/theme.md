@@ -139,7 +139,6 @@ iconfont: "4415496_59g1326wajd"
 | Windows CMD | `mklink /J .\themes\shokax .\node_modules\hexo-theme-shokax` |
 | Linux Bash  | `ln -s ./themes/shokax ./node_modules/hexo-theme-shokax`     |
 
-
 此时`_iconfont.styl`路径为`/themes/shokax/source/css/_iconfont.styl`。
 :::
 
