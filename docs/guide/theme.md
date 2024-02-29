@@ -181,7 +181,7 @@ menu:
    - `home(link2)` 为本地化键（详见本地化）和备用名称；
    - `/(/page2/)` 为超链接地址，可为站外链接（需要带 `https`）；
    - `||` 分隔符，分隔链接和图标；
-   - `home(user)` 图标，具体可参见 `/source/css/_iconfont.styl`。
+   - `home(user)` 图标，具体可参见 `_iconfont.styl`。
 2. 下拉菜单（例如 `submenu`）
    - `default` 为 dropbox 显示的内容，不建议在此处放置超链接地址（建议设置为 `/`）；
    - 剩余部分为 n 个不重复的独立导航链接。
