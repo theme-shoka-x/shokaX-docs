@@ -75,7 +75,7 @@ To add icons to your project, follow these steps:
 
 #### 3. Enter Project Settings
 
-In settings, change 'FontClass/Symbol Prefix' from the default 'icon-' to 'i-'; change 'Font Family' to 'ic'; and ensure the formats WOFF2, WOFF, TTF, EOF, and SVG are all selected; then save.
+In settings, change 'FontClass/Symbol Prefix' from the default 'icon-' to 'i-'; change 'Font Family' to 'ic'; and ensure the formats WOFF2, WOFF, TTF, EOT, and SVG are all selected; then save.
 
 #### 4. Generate Code
 
@@ -94,13 +94,24 @@ iconfont: "4415496_59g1326wajd"
 
 You can now add new icons to your project or modify existing ones. Avoid deleting icons if not necessary, as it may affect rendering.
 
-#### 6. Modify the _iconfont.sty File
+#### 6. Modify the _iconfont.styl File
 
-Open the file `/source/css/_iconfont.sty` for editing.
+Open the file `/node_modules/hexo-theme-shokax/source/css/_iconfont.styl` for editing.
+
+:::tip
+To facilitate operations, it is recommended to create a symbolic link to the theme folder.
+
+| Terminal    | Command                                                       |
+|-------------|--------------------------------------------------------------|
+| Windows CMD | `mklink /J .\themes\shokax .\node_modules\hexo-theme-shokax` |
+| Linux Bash  | `ln -s ./themes/shokax ./node_modules/hexo-theme-shokax`     |
+
+At this point, the path to `_iconfont.styl` would be `/themes/shokax/source/css/_iconfont.styl`.
+:::
 
 Access the link (replace it with your own) `//at.alicdn.com/t/c/font_4415496_59g1326wajd.css` in your browser.
 
-Select and copy the code corresponding to the '.i-' prefix for the icon you've added and paste it at the end of the `/source/css/_iconfont.sty` file.
+Select and copy the code corresponding to the '.i-' prefix for the icon you've added and paste it at the end of the `_iconfont.styl` file.
 
 For example:
 
@@ -137,7 +148,7 @@ The configuration here consists of:
     - `home (link2)` as the localized key (see localization) and alternative name;
     - `/ (/page2/)` as the hyperlink address, can be an external link (must include `https`);
     - `||` separator, separating the link and icon;
-    - `home (user)` icon, detailed in `/source/css/_iconfont.styl`.
+    - `home (user)` icon, detailed in `_iconfont.styl`.
 2. Dropdown menu (e.g., `submenu`)
     - `default` is the content displayed in the dropdown box, not recommended to place hyperlink addresses here (suggested to set as `/`);
     - The remaining part consists of n unique independent navigation links.
