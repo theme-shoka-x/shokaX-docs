@@ -135,9 +135,9 @@ iconfont: "4415496_59g1326wajd"
 为了方便操作，建议为本主题文件夹创建软链接。
 
 | 终端        | 命令                                                         |
-|-----------|------------------------------------------------------------|
+| ----------- | ------------------------------------------------------------ |
 | Windows CMD | `mklink /J .\themes\shokax .\node_modules\hexo-theme-shokax` |
-| Linux Bash  | `ln -s ./themes/shokax ./node_modules/hexo-theme-shokax`     |
+| Linux Bash  | `cd ../themes && ln -s ../node_modules/hexo-theme-shokax shokax` |
 
 此时`_iconfont.styl`路径为`/themes/shokax/source/css/_iconfont.styl`。
 :::
