@@ -89,7 +89,7 @@ Iconfont用于在各种界面元素中显示小图标，包括导航栏、社交
 
 #### 1、接受Iconfont项目邀请
 
-访问 [Iconfont项目邀请链接](https://www.iconfont.cn/invite?type=project&token=LotXIguNze4Ce2GI#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80%8Cshoka%E3%80%8D) 来接受邀请。
+访问 [Iconfont项目邀请链接](https://www.iconfont.cn/invite?type=project&token=JZNyYtPHBsu67t0E#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80%8Cshoka%E3%80%8D) 来接受邀请。
 
 :::tip
 此邀请链接理论上长期有效，若过期请提issue。
