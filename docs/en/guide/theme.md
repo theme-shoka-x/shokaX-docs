@@ -57,7 +57,7 @@ If you want to customize the small icons in the navbar, social links, sidebar, m
 
 #### 1. Accept the Invitation of the Iconfont Project
 
-[Click here to accept the invitation](https://www.iconfont.cn/invite?type=project&token=LotXIguNze4Ce2GI#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80%8Cshoka%E3%80%8D)
+[Click here to accept the invitation](https://www.iconfont.cn/invite?type=project&token=JZNyYtPHBsu67t0E#%E9%82%80%E8%AF%B7%E4%BD%A0%E5%8A%A0%E5%85%A5%E3%80%8Cshoka%E3%80%8D)
 
 :::tip
 This invitation link is theoretically valid for a long time, please raise an issue if it expires.
